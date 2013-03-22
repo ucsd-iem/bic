@@ -1,0 +1,67 @@
+<%= form_for(@registrant) do |f| %>
+  <% if @registrant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registrant.errors.count, "error") %> prohibited this registrant from being saved:</h2>
+
+      <ul>
+      <% @registrant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <hr />
+
+    <%= f.label :first_name, "First Name" %>
+    <%= f.text_field :first_name %>
+    <%= f.label :last_name, "Last Name" %>
+    <%= f.text_field :last_name %>
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :affiliation %>
+    <%= affiliation_selector @registrant.affiliation %>
+    <div id="affiliation" <%= affiliation_toggle(@registrant.affiliation) %>>
+    	Other Affiliation
+      <%= f.text_field :affiliation %>
+    </div>
+    
+  </div>
+  
+  <div class="field clearfix" id="attendance">
+    <h3>Attendance</h3>
+  <div class="row">
+    <div class="span8">
+      <div class="span2">
+        <%= f.check_box:wednesday %>
+        <%= f.label :wednesday, "Wednesday", :class => 'checkbox inline' %>      
+      </div>
+      <div class="span2">
+        <%= f.check_box :thursday %>
+        <%= f.label :thursday, "Thursday" , :class => 'checkbox inline' %>
+      </div>
+
+      <div class="span2">
+        <%= f.check_box :friday %>
+        <%= f.label :friday, "Friday", :class => 'checkbox inline' %>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="field">
+    <%= f.label :special_needs, "Special Request" %>
+    <p class='muted'>Please let us know if there is anything else that we can assist with.</p>
+    <%= f.text_field :special_needs, :class => "span6" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Register", :class => "btn btn-large btn-success" %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<section class='page'>
+  
+  <h1>Welcome</h1>
+
+    <p>The  14th UC Systemwide Bioengineering Symposium in 2013 will take place on the campus of UC San Diego.  You are cordially invited to participate, establish collaborations, renew old and make new friendships. There will be exciting speakers as well as many opportunities for students to present posters, give flat screen posters and oral presentations.  Organized by the <%= link_to 'Jacobs School of Engineering', 'http://www.jacobsschool.ucsd.edu/' %> (<%= link_to 'JSOE', 'http://www.jacobsschool.ucsd.edu/' %>), <%= link_to 'Institute of Engineering in Medicine', "https://iem.ucsd.edu" %> (<%= link_to 'IEM', 'https://iem.ucsd.edu' %>), and <%= link_to "Department of Bioengineering", "http://be.ucsd.edu" %>.</p>
+    
+    <p>To ensure your participation in this event, please <%= link_to 'register', register_url %> no later than <span class='alert-error'>TBD DATE</span>.</p>
+
+
+  <div id="buttons">
+    <%= link_to 'Register Now', register_url, :class => 'btn btn-large btn-success', :id => :register %>
+    <%= link_to 'Submit Your Abstract', submit_abstracts_url, :class => 'btn btn-large btn-success' %>
+  </div>
+
+  <section id='announcements'>
+    <h2>Announcements</h2>
+    <%= @announcements.empty? ? content_tag(:h3, "No announcements yet.", :class => :alert) : render('announcements') %>
+  </section>
+</section>

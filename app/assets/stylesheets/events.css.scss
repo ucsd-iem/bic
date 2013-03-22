@@ -1,0 +1,31 @@
+body.events {
+  
+  table { font-size: 0.9em; width:98%;
+    .date { font-style: normal;  white-space: nowrap; width:80px; vertical-align: middle; text-align: center;}
+    td {  margin:0; padding:0;
+      
+      div.event { background-color: #d9edf7; border-right:1px solid lighten(#bce8f1,10%); border-left:1px solid darken(#bce8f1,3%); color: #3a87ad; height:64px; line-height: 1.3em; padding:6px; margin:0;  vertical-align: top;
+        i { font-weight:200; }
+      }
+      div.event.bottom { border-bottom: 1px solid darken(#bce8f1,7%); height:63px; }
+      div.event.top { border-top: 1px solid #fff; height:63px; }
+      div.event.bottom.top { height:62px; }
+      div.event.quarter_start {   }
+      div.event.quarter_before_start { height:80px; margin-top: -32px;  }
+      div.event.quarter_end { height: 32px; margin-bottom: 32px;  }
+      div.event_block { border-left:1px solid darken(#bce8f1,3%); padding:14px 10px; }
+      div.event_block_multiple { border-left:1px solid darken(#bce8f1,3%); float:left; padding:14px 10px; width:47%; }
+      
+      .moderator_label { background-color:#d9edf7; border-color:#bce8f1; color:#3a87ad; }
+    }
+    td.event { border-top: 1px solid #d9edf7; width:200px; vertical-align: middle;  }
+    td.event_row { border-top: 1px solid #d9edf7; vertical-align: middle;  }
+    td.time { height:60px; padding:0 13px; text-align:center; width:60px; vertical-align: middle; }
+    td.list_time { padding:0 13px; text-align:center; width:160px; vertical-align: middle; }
+    td.top, td.bottom {  vertical-align: top; }
+    
+    .session { font-style: normal; white-space: nowrap; width:20px; vertical-align: middle; text-align: center;}
+    .moderators { font-weight:600;}
+  }
+
+}

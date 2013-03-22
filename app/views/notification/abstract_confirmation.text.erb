@@ -1,0 +1,13 @@
+Dear <%= @abstract.attendee.first_name %>,
+
+Your abstract has been received. Please review the information below:
+
+<% %w{name email order_id}.each do |w| -%><%= "#{w.capitalize}: #{@abstract.attendee.send(w)}
+" if @abstract.attendee.send(w) && @abstract.attendee.send(w) != '' %><% end %>
+<% %w{title authors affiliations body}.each do |w| -%><%= "#{w.capitalize}: #{@abstract.send(w)}
+" if @abstract.send(w) && @abstract.send(w) != '' %><% end %>
+Keywords: <%= @abstract.keyword_list %>
+
+You may edit your abstract up to 48 hours prior to the event by using the following form: <%= link_to 'https://bic.ucop.edu/2013/abstracts/submit', 'https://bic.ucop.edu/2013/abstracts/submit' %>. Please contact <%= mail_to 'bic@ucop.edu' %> if you have any questions.
+
+Thanks

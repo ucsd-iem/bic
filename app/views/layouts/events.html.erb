@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>14th UC Systemwide Bioengineering Symposium <%= h(yield(:title) || nil)%></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag 'modernizr' %>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19406073-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <%= csrf_meta_tags %>
+</head>
+<body class='events'> 
+	<div class="container">
+	    <%= content_tag :div, content_tag(:button, 'x', :class => :close, "data-dismiss" => 'alert') + flash[:notice], :class =>'alert' if flash[:notice]%>
+        
+        <%= render "layouts/nav" %>
+        
+        <%= render :partial => "layouts/header" %>
+
+        <div class="row">
+          
+          <div class='span12'>
+            <div class="well done">
+              <div class='inner'>
+                <section class='content'><%= yield %></section>                    
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+        
+        <%= render :partial => 'layouts/footer' %>
+    </div><!--  container -->
+</body>
+</html>

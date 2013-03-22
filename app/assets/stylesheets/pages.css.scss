@@ -1,0 +1,25 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#buttons { margin:2em; text-align: center; 
+  #register { margin-right:2em; }
+  }
+
+#hotel_list {
+  li { list-style-type: none; margin:0; 
+    img { float:right; width:192px; margin-left:30px; }
+  }
+}
+
+#sponsors {
+  ul { margin:0; }
+  li { float:left; list-style-type: none; margin:20px; width:260px; 
+    img { margin:10px 0; }
+    a { clear:both; display:block; }
+  }
+  
+  
+}
+.tooltip-inner { text-align:left; }
+.tooltip.in { opacity: 0.9; }

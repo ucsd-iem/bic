@@ -1,0 +1,14 @@
+<nav class='navbar container'>
+  <div class="navbar-inner">
+    <ul class="nav nav-pills">
+      <li <%= "class=active" if current_page?(root_url) %>><%= link_to 'Home', root_url %></li>
+      <li <%= "class=active" if current_page?(program_url) %>><%= link_to 'Program', program_url %></li>
+      <li <%= "class=active" if current_page?(abstracts_url) %>><%= link_to 'Abstracts', abstracts_url %></li>
+      <li <%= "class=active" if current_page?(location_url) %>><%= link_to 'Location', location_url %></li>
+      <li <%= "class=active" if current_page?(accommodations_url) %>><%= link_to 'Accommodations', accommodations_url %></li>
+      <li <%= "class=active" if current_page?(register_url) %>><%= link_to 'Registration', register_url %></li>
+      <li <%= "class=active" if current_page?(contact_url) %>><%= link_to 'Contact Us', contact_url %></li>
+      <li <%= "class=active" if current_page?(sponsors_url) %>><%= link_to 'Sponsors', sponsors_url %></li>
+    </ul>
+  </div>
+</nav>

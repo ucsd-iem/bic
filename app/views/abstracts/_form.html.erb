@@ -1,0 +1,70 @@
+<%= form_for(@abstract, :html => {:multipart => true }) do |f| %>
+    <%= f.hidden_field :attendee_id, :value => @attendee.id %>
+
+  <% if @abstract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@abstract.errors.count, "error") %> prohibited this abstract from being saved:</h2>
+
+      <ul>
+      <% @abstract.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+      <div class="span3">
+        <h3><span class='alert-info'>Email</span> <%= @abstract.email %></h3>
+        <%= f.hidden_field :email, :value => @abstract.email %>
+      </div>
+      <div class="span3">
+        <h3><span class='alert-info'>Order ID</span> <%= @abstract.order_id %></h3>
+        <%= f.hidden_field :order_id, :value => @abstract.order_id %>
+      </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.text_field :title, :class => 'input-xxlarge', :placeholder => 'Title' %>
+  </div>
+  <div class="control-group">
+    <%#= f.label :authors, "Author(s)" %>
+    <%= f.text_field :authors, :class => 'input-xxlarge', :placeholder => 'Authors' %>
+  </div>
+  <div class="control-group">
+    <%#= f.label :affiliations, "Affiliation(s)" %>
+    <%= f.text_area :affiliations, :rows => 2, :class => 'input-xxlarge', :placeholder => 'Affiliation(s)' %>
+  </div>
+  <div class="control-group">
+    <%#= f.label :keywords %>
+    <p class='muted'>Comma separated keywords to help describe the abstract</p>
+    <%= f.text_field :keyword_list, :class => 'input-xxlarge', :placeholder => 'Keywords' %>
+  </div>
+  <div class="control-group">
+    <%#= f.label :body %>
+    <%= f.text_area :body, :rows => 4, :class => 'input-xxlarge', :placeholder => "Abstract Body" %>
+  </div>
+
+  <div class="control-group">
+    <%#= f.label :body %>
+    <%= f.text_area :personal_statement, :rows => 4, :class => 'input-xxlarge', :placeholder => "Personal Statement: Describe in a few words why your research should be chosen for an oral presentation" %>
+  </div>
+
+  <div class="control-group">
+    <%#= f.label :authors, "Author(s)" %>
+	<%= f.text_field :video_url, :class => 'input-xxlarge', :placeholder => 'Video Presentation URL (e.g. Vimeo or Youtube link)' %>	
+  </div>
+
+  <div class='row'>
+      <div class="span7">
+    	<%= f.label :poster, "Poster (PDF or Powerpoint)", :class => "alert-info" %>
+    	<%= f.file_field :poster %>    
+      </div>
+  </div>
+
+  <hr />
+  
+  <div class="actions">
+    <%= f.submit :class => 'btn btn-success' %>
+  </div>
+
+<% end %>

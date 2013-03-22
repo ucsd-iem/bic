@@ -1,0 +1,14 @@
+<nav id='explore'>
+  <ul class='nav nav-pills pull-right'>
+    <li class='dropdown'>
+      <%= link_to(raw("Explore other related sites #{content_tag :i, '', :class => 'icon-chevron-down'}"), '#', :class => "dropdown-toggle", "data-toggle" => 'dropdown') %>
+      <ul class='dropdown-menu open'>
+        <%= content_tag :li, link_to(raw("Institute of Engineering &amp; Medicine"), "http://iem.ucsd.edu") %>
+        <%= content_tag :li, link_to("Bioengineering Institute of California", "http://bic.ucop.edu") %>
+        <%= content_tag :li, link_to("Department of Bioengineering", "http://be.ucsd.edu") %>
+        <%= content_tag :li, link_to("School of Medicine", "http://som.ucsd.edu") %>
+        <%= content_tag :li, link_to("UC San Diego", "http://ucsd.edu") %>
+      </ul>
+    </li>
+  </ul>
+</nav>

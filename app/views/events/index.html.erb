@@ -1,0 +1,66 @@
+<section class='page' id="program">
+	
+	<h1>Tentative Program</h1>
+  	
+  <nav>
+    <ul class='nav nav-tabs'>
+      <li <%= "class=active" if Date.today < Date.new(2013,06,19) %>><%= link_to 'Wednesday, June 19','#wed', "data-toggle" => 'tab' %></li>
+      <li <%= "class=active" if Date.today > Date.new(2013,06,20) %>><%= link_to 'Thursday, June 20','#thu', "data-toggle" => 'tab' %></li>
+      <li <%= "class=active" if Date.today > Date.new(2013,06,21) %>><%= link_to 'Friday, June 21','#fri', "data-toggle" => 'tab' %></li>
+    </ul>
+  </nav>
+  
+  <div class="tab-content">
+      
+  	<div id="wed" class='tab-pane <%= "active" if Date.today < Date.new(2013,06,20) %>'>
+  		<table class='table table-striped'>
+  		  <%= render "program", :events => @wednesday %>
+      </table>
+    </div>
+
+  	<div id="thu" class='tab-pane <%= "active" if Date.today > Date.new(2013,06,20) && Date.today < Date.new(2013,06,21) %>'>
+  		<table class='table table-striped'>
+  		  <%= render "program", :events => @thursday %>  	  			
+      </table>
+    </div>
+
+    <div id="fri" class='tab-pane <%= "active" if Date.today > Date.new(2013,06,21) && Date.today < Date.new(2013,06,22) %>'>
+  		<table class='table table-striped'>
+  		  <%= render "program", :events => @friday %>  	  			
+      </table>
+    </div>
+    
+  </div>  
+  <p>The Oral Session A on Wednesday June 19, 2013, will be the first time of a discussion about clinical trials designed entirely by professional Biomedical Engineers.  This session will be chaired by Drs. John Watson and David Gough, who will discuss the opportunities for bioengineering designed clinical trials for the case of the assisted heart pump and the chronic glucose sensors, respectively, both pioneers in these fields.  The other speakers will be Dr. Karen Christman, Assistant Professor of Bioengineering, about her clinical trial on the use of decellularized extracellular matrix for prevention of heart failure following heart attacks, Dr. Marcos Intaglietta, Distinguished Professor of Bioengineering, about the use of next-generation blood substitutes in critically patients, and Dr. Erik Kistler, M.D., Ph.D. in Bioengineering and Assistant Professor of Anesthesiology, about the autodigestion hypothesis in shock and multi-organ failure and the enteral protease blockade in septic patients.  The session will illustrate to students the importance of human experimentation in their professional careers as biomedical engineers.</p>
+  
+  <p>Each of the eleven Oral Sessions (B – P) consists of two presentations by junior faculty, who serve as chairpersons of the session, followed by oral presentations from selected Graduate students and Post-doctoral Fellows based on the Abstract submission.  These student presentations will be selected by the Program Committee according to innovation and quality, as well as suitability for the overall theme of each session.  These sessions serve to present highly innovative graduate and post-graduate research and engineering developments with cutting-edge ideas as well as high-risk projects.  The program will be finalized in the second week of May 2013.</p>
+  
+  <p>The poster sessions are an integral part of the Bioengineering Symposia.  The time periods of the posters are scheduled as standing alone sessions without overlap with any other conference activities.  The poster sessions are organized according to general topic areas, which include, but are not limited to, the following topics:</p>
+  
+  <ul>
+      <li>Bioengineering Analysis of Disease</li>
+      <li>Bioinformatics</li>
+      <li>Biomaterials</li>
+      <li>Biomechanics &amp; Biophysics</li>
+      <li>Biomedical Devices</li>
+      <li>BioMEMS</li>
+      <li>Biosensors</li>
+      <li>Cardiovascular Engineering</li>
+      <li>Cell Mechanics and Engineering</li>
+      <li>Computational Biology</li>
+      <li>Drug Delivery</li>
+      <li>Genomics and Genomic–wide Analysis</li>
+      <li>Diagnostic and Therapeutic Imaging</li>
+      <li>Microcirculation and Tissue Transport</li>
+      <li>Modeling and Multiscale analysis</li>
+      <li>Metabolic Engineering</li>
+      <li>Nanobiotechnology</li>
+      <li>Stem Cell Engineering</li>
+      <li>Synthetic Biology</li>
+      <li>Systems Biology</li>
+      <li>Tissue Engineering</li>
+  </ul>
+  
+  <p>In addition to the scientific sessions, we will arrange active interactions between students and bioengineering industry.  The symposium attracts representatives from many branches of Bioengineering Industry and it serves as market for job opportunities.  We will arrange interactions and interviews between interested companies and students, establish a time schedule via the conference website for individual interviews and will make available special meeting rooms for one-on-one meetings between students and company representatives.  The “quiet” period before the start of the Symposium on Wednesday (June 19) will be reserved for these interviews in addition to meetings during and after the Symposium.</p>
+    
+</section>

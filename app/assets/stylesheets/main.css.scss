@@ -1,0 +1,171 @@
+@import "bootstrap";
+// @import "bootstrap-responsive";
+
+$gray: #d8dde1;
+$dark_gray: #9da9b9;
+$blue_gray: #667b8e;
+$blue: #055d89;
+$cloudy_blue: #a1b1c1;
+$dark_blue: #414b5a;
+$light_blue: #c5d8df;
+$pink: #c20c57;
+$hot_pink: #d91868;
+$sea_blue: #e1e4e9;
+
+$border_color: #bdc4cd;
+
+html { 
+}
+
+body { color: #333333; background-color:#D8DDE1; font-family:"Helvetica Neue", Arial, Helvetica, sans-serif; font-size:90%; 
+background: url(aerial-scripps.jpg) no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+ -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+ height:100%;
+
+  h1,h2,h3,h4,h5,h6 { font-weight:300; }
+  
+  h1 { font-size:2em;}
+  h2 { font-size:1.7em;}
+  h3 { font-size:1.3em;}
+  h4 { font-size:1.1em;}
+  a:hover {text-decoration: none;}
+  p {font-size:0.9em;}
+  .inner { padding:1em; }
+  
+  input[type="file"] { line-height:1em; }
+
+  .alert-error { background-color: rgba(28,83,171,0.77); color:white; padding:2px 4px; font-weight:300; -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+      h4 { font-weight:100; }
+    }
+  
+  .navbar { margin:0.4em 0; }
+  
+  header { margin:1em 0;
+    
+    h1 { line-height:1; margin:0 0 0.2em;
+      a { color:$dark_blue; white-space: nowrap; }
+    }
+    h1,h2 {float:left;}
+    h2 { background-color: rgba(28,83,171,0.77); color:white; display:inline; font-size:1.4em; font-weight:100; letter-spacing:.06em; line-height:28px; padding: 2px 6px; margin:0;
+    
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+      a, a:hover { color:#fff; white-space: nowrap; }
+      
+    }
+    p { clear:both; color:#777; }
+    a { color:#fff;}
+    a:hover {text-decoration: none;}
+  }
+  
+  .well.done { background: #fff; border: 1px solid $border_color; margin:0; padding:0;
+    .content {  
+      section { padding:1em 0; }
+    }
+  }
+
+  
+  #abstracts {
+    .accordion-group { border:0; margin-bottom:0.6em;}
+    .accordion-heading { 
+      p { margin:0; 
+        a { display:inline; padding:8px 0; }}
+    }
+  }
+  
+  #keyword_cloud { overflow:hidden;
+    h2 { margin:2em 0 0;}
+    a { background-color: $cloudy_blue; border-radius: 3px; color: white; display: inline-block; padding: 3px 5px 3px; margin:3px; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); -webkit-border-radius: 3px; -moz-border-radius: 3px; }
+    a:hover {
+        }
+    .css1 { font-size: 0.3em; }
+    .css2 { font-size: 0.5em; }
+    .css3 { font-size: 0.7em; }
+    .css4 { font-size: 1em; }
+    .css5 { font-size: 1.2em; }
+    .css6 { font-size: 1.4em; }
+    .css7 { font-size: 1.6em; }
+  }
+  
+  #attendance { margin-bottom:1em; }
+    
+  .field { clear:both; }
+  
+  .field_with_errors {
+    label { color: #B94A48; }
+    input { background-color: #F2DEDE; clear:both; color: #B94A48;}
+    .input-xxlarge { width: 468px; }
+    label.message { background-color: #B94A48; color:white; display: inline-block; line-height: 20px; position:relative; bottom:3px; left:10px;
+      padding: 1px 4px 2px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      }
+  }
+  
+  #error_explanation {   
+    padding: 8px 35px 8px 14px;
+    margin-bottom: 20px;
+    color: #C09853;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #FCF8E3;
+    border: 1px solid #FBEED5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #B94A48;
+    background-color: #F2DEDE;
+    border-color: #EED3D7;
+    }
+  footer { font-size:0.77em; margin:1.4em 0 8em;
+    .breadcrumb { background-color: #fff; margin:0; padding:0;
+      li { font-size:10px;
+        .divider { padding: 0 1px; }
+        }
+    }
+    p { margin:0; }
+    a { color:#666; }
+    a:hover { background-color:#D9EDF7; border-bottom-color:#BCE8F1; border-left-color:#BCE8F1; border-right-color:#BCE8F1; border-top-color:#BCE8F1; color:#3A87AD; }
+  }
+}
+
+
+// Landscape phones and down //
+
+@media (max-width: 480px) { 
+
+}
+ 
+// Landscape phone to portrait tablet //
+
+@media (max-width: 767px) {
+
+}
+ 
+// Portrait tablet to landscape and desktop //
+
+@media (min-width: 768px) and (max-width: 979px) { 
+
+
+}
+ 
+// Large desktop
+
+@media (min-width: 1200px) {
+
+
+}
+
+
