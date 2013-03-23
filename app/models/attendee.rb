@@ -9,17 +9,15 @@ class Attendee < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   before_save :ensure_authentication_token
   
+  has_many :tickets, :class_name => "Ticket", :foreign_key => "ticket_id"
+  
   class << self
     
     attr_reader :cache_freq
     attr_accessor :last_attendees_request
-        
-    def create_or_update
-      
-    end
-    
+            
     def import
-      ec = init_client
+      eventbrite_client = init_client
 
       puts time_since_last_attendees_request
       puts @cache_freq
@@ -27,7 +25,7 @@ class Attendee < ActiveRecord::Base
       if time_since_last_attendees_request > @cache_freq
         @last_attendees_request = Time.now
         
-        @attendees = ec.event_list_attendees(:id => '5146078058')['attendees']
+        @attendees = eventbrite_client.event_list_attendees(:id => '5146078058')['attendees']
         @attendees.map {|a| create_or_update a['attendee']}
 
       else
@@ -47,7 +45,7 @@ class Attendee < ActiveRecord::Base
     end
     
     def create_or_update(attendee)
-      result = Attendee.find_by_eid(attendee['id'].to_s)
+      result = Attendee.find_by_email(attendee['email'].to_s)
       if result
         result.update_attributes( :eid => attendee['id'],
           :first_name => attendee['first_name'], 

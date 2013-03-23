@@ -3,6 +3,7 @@ class CreateTickets < ActiveRecord::Migration
     create_table :tickets do |t|
       t.integer :eid
       t.string :barcode
+      t.string :currency
       t.integer :order_id
       t.integer :quantity
       t.integer :ticket_id

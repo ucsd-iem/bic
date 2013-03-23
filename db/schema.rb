@@ -163,6 +163,7 @@ ActiveRecord::Schema.define(:version => 20130321014333) do
   create_table "tickets", :force => true do |t|
     t.integer  "eid"
     t.string   "barcode"
+    t.string   "currency"
     t.integer  "order_id"
     t.integer  "quantity"
     t.integer  "ticket_id"
