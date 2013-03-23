@@ -46,6 +46,7 @@ end
 group :test, :development do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'faker'
   gem "rspec-rails", "~> 2.0"
   gem 'rb-fchange', :require => false
   gem 'rb-fsevent', :require => false
@@ -54,10 +55,10 @@ end
 
 group :test do
   gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
-  gem 'faker'
   gem 'guard-livereload'
   gem 'guard-rspec'
   gem 'launchy'
+  gem 'shoulda'
   gem 'sqlite3'
 end
 

@@ -7,8 +7,19 @@
 # Ignore bundler config
 /.bundle
 
+# Ignore sensitive settings
+/config/*.yml
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
+
+# Ignore test files
+/public/system/*
+/coverage/
+/spec/tmp/*
+**.orig
+rerun.txt
+pickle-email-*.html
 
 # Ignore all logfiles and tempfiles.
 /log/*.log

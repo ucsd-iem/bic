@@ -1,22 +1,16 @@
 Ust::Application.routes.draw do
-  
-  devise_for :attendees
-
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  devise_for :attendees
   devise_for :users
   
   get "/accommodations" => "pages#accommodations"
   get "/contact" => "pages#contact"
   get "/location" => "pages#location"
   get "/program" => "events#index"
+  get "/register" => "registrants#new"
   get "/sponsors" => "pages#sponsors"
   get "/terms" => "pages#terms"
-  get "/thanks" => "pages#thanks"  
-    
-  get "/registering" => "registrants#create"
-  match "/register" => "registrants#new"
-  match "/register/update/:token" => "registrants#edit", :as => :token
-
+  get "/thanks" => "pages#thanks"
 
   resources :abstracts do
     collection do
@@ -26,9 +20,10 @@ Ust::Application.routes.draw do
       match '/verify' => 'abstracts#verify', :as => :verify
     end
   end
+
   resources :events
   resources :moderators
-  resources :registrants, :only => [:new, :create, :update]
+  # resources :registrants, :only => [:new, :create, :update]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
