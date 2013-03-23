@@ -1,0 +1,12 @@
+development: 
+  app_key: I5PGUXTDFK6KYOJQH
+  user_key: 12721004484885131
+test: 
+  app_key: I5PGUXTDFK6KYOJQH
+  user_key: 12721004484885131
+staging: 
+  app_key: I5PGUXTDFK6KYOJQH
+  user_key: 12721004484885131
+production: 
+  app_key: I5PGUXTDFK6KYOJQH
+  user_key: 12721004484885131
