@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321014333) do
+ActiveRecord::Schema.define(:version => 20130324175824) do
 
   create_table "abstracts", :force => true do |t|
     t.string   "title"
@@ -54,25 +54,32 @@ ActiveRecord::Schema.define(:version => 20130321014333) do
   end
 
   create_table "attendees", :force => true do |t|
-    t.integer  "eid"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "email"
-    t.string   "order_type"
-    t.string   "barcode"
-    t.integer  "order_id"
-    t.float    "amount_paid"
-    t.string   "currency"
-    t.string   "discount"
-    t.integer  "quantity"
-    t.integer  "ticket_id"
-    t.integer  "event_id",    :limit => 8
-    t.string   "event_date"
+    t.string   "email",                  :default => "", :null => false
     t.datetime "created"
     t.datetime "modified"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.integer  "failed_attempts",        :default => 0
+    t.string   "unlock_token"
+    t.datetime "locked_at"
+    t.string   "authentication_token"
   end
+
+  add_index "attendees", ["authentication_token"], :name => "index_attendees_on_authentication_token", :unique => true
+  add_index "attendees", ["email"], :name => "index_attendees_on_email", :unique => true
+  add_index "attendees", ["reset_password_token"], :name => "index_attendees_on_reset_password_token", :unique => true
+  add_index "attendees", ["unlock_token"], :name => "index_attendees_on_unlock_token", :unique => true
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -161,16 +168,16 @@ ActiveRecord::Schema.define(:version => 20130321014333) do
   end
 
   create_table "tickets", :force => true do |t|
-    t.integer  "eid"
     t.string   "barcode"
     t.string   "currency"
-    t.integer  "order_id"
     t.integer  "quantity"
-    t.integer  "ticket_id"
-    t.integer  "event_id"
+    t.integer  "ebrite_id"
+    t.integer  "ebrite_event_id"
+    t.integer  "ebrite_order_id"
+    t.integer  "ebrite_ticket_id"
     t.integer  "attendee_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -4,11 +4,11 @@ module TicketSpecHelper
   def valid_ticket_attributes
     { :attendee_id => 1,
       :barcode => "148106302189258150001",
-      :eid => 189258150,
-      :event_id => 5146078058,
-      :order_id => 148106302,
       :quantity => 1,
-      :ticket_id => 17474148 }
+      :ebrite_id => 189258150,
+      :ebrite_event_id => 5146078058,
+      :ebrite_order_id => 148106302,
+      :ebrite_ticket_id => 17474148 }
   end
   
   def required_keys
@@ -36,7 +36,7 @@ describe Ticket do
     end
 
     # instance methods should be readble
-    %w(attendee eid barcode order_id quantity ticket_id event_id created_at updated_at).map { |m| it { @ticket.should respond_to m.to_sym } }  
+    %w(attendee ebrite_id barcode ebrite_order_id quantity ebrite_ticket_id ebrite_event_id created_at updated_at).map { |m| it { @ticket.should respond_to m.to_sym } }  
     
     # instance methods should be writeable
     # string datatypes
@@ -48,7 +48,7 @@ describe Ticket do
     end
           
     # integer datatypes
-    %w(eid order_id quantity ticket_id event_id).each do |m|
+    %w(ebrite_id ebrite_order_id quantity ebrite_ticket_id ebrite_event_id).each do |m|
       it "should be writeable for #{m}" do
         @ticket.attributes = {m.to_sym => 714732947382934 }
         @ticket.send(m).should == 714732947382934
