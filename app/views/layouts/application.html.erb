@@ -28,7 +28,8 @@
 </head>
 <body> 
 	<div class="container">
-	    <%= content_tag :div, content_tag(:button, 'x', :class => :close, "data-dismiss" => 'alert') + flash[:notice], :class =>'alert' if flash[:notice]%>
+	    <%= content_tag :div, content_tag(:button, 'x', :class => :close, "data-dismiss" => 'alert') + flash[:notice], :class =>'alert alert-info' if flash[:notice]%>
+	    <%= content_tag :div, content_tag(:button, 'x', :class => :close, "data-dismiss" => 'alert') + flash[:alert], :class =>'alert' if flash[:alert]%>
         
         <%= render "layouts/nav" %>
         

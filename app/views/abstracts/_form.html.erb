@@ -1,6 +1,4 @@
 <%= form_for(@abstract, :html => {:multipart => true }) do |f| %>
-    <%= f.hidden_field :attendee_id, :value => @attendee.id %>
-
   <% if @abstract.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@abstract.errors.count, "error") %> prohibited this abstract from being saved:</h2>
@@ -12,17 +10,10 @@
       </ul>
     </div>
   <% end %>
-  <div class="row">
-      <div class="span3">
-        <h3><span class='alert-info'>Email</span> <%= @abstract.email %></h3>
-        <%= f.hidden_field :email, :value => @abstract.email %>
-      </div>
-      <div class="span3">
-        <h3><span class='alert-info'>Order ID</span> <%= @abstract.order_id %></h3>
-        <%= f.hidden_field :order_id, :value => @abstract.order_id %>
-      </div>
-  </div>
-
+  
+  
+  <h2><%= current_attendee.name %> / <%= current_attendee.email %></h2>
+  
   <div class="control-group">
     <%= f.text_field :title, :class => 'input-xxlarge', :placeholder => 'Title' %>
   </div>
