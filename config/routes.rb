@@ -1,6 +1,10 @@
 Ust::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-  devise_for :attendees
+
+  devise_for :attendees, :path => '', :path_names => {:sign_in => '/abstracts/submit', :sign_out => 'logout'}
+  devise_scope :attendee do
+    get "/abstracts/submit" => "devise/sessions#new"
+  end
   devise_for :users
   
   get "/accommodations" => "pages#accommodations"
@@ -16,8 +20,6 @@ Ust::Application.routes.draw do
     collection do
       get 'keyword/:keyword' => 'abstracts#keyword', :as => :keyword
       get 'search/:query' => 'abstracts#search', :as => :search
-      match 'submit' => 'abstracts#submit'
-      match '/verify' => 'abstracts#verify', :as => :verify
     end
   end
 

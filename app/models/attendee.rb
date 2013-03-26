@@ -15,5 +15,8 @@ class Attendee < ActiveRecord::Base
     @name = ""
     @name += "#{self.first_name} #{self.last_name}"
   end
-    
+  
+  def abstract
+    self.abstracts.first
+  end
 end
