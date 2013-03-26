@@ -15,7 +15,7 @@ development:
   database: bic2013_development
   pool: 5
   username: bic2013
-  password: fud-ceed-gis-fin-wov-ris-giak-wu
+  password: password-here
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -35,5 +35,5 @@ production:
   database: bic2013_production
   pool: 5
   username: bic2013
-  password: fud-ceed-gis-fin-wov-ris-giak-wu
+  password: password-here
   host: localhost

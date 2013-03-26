@@ -1,7 +1,7 @@
 <section id='abstracts'>
 	<h1>Abstracts <%= "matching keyword: #{params[:keyword]}" if params[:keyword] %></h1>
 	
-	<p>Individuals <%= link_to "submitting abstracts", submit_abstracts_url %> for poster presentations have the option of renting a flat screen TV for $20 to display their poster electronically (in lieu of a printed poster).  All abstracts are due by <span class='alert-info'>April&nbsp;29</span>.</p>
+	<p>Individuals <%= link_to "submitting abstracts", new_attendee_session_url %> for poster presentations have the option of renting a flat screen TV for $20 to display their poster electronically (in lieu of a printed poster).  All abstracts are due by <span class='alert-info'>April&nbsp;29</span>.</p>
 	<p>We invite original contributions in any area of bioengineering, including but not limited to: <em>Bioengineering Analysis of Disease</em>,
     <em>Bioinformatics</em>,
     <em>Biomaterials</em>,
@@ -25,10 +25,11 @@
     <em>Tissue Engineering</em>.
   </ul>
   
-   <p><%= link_to "Submit an abstract", submit_abstracts_url, :class => "btn btn-large btn-success" %></p>
+   <p><%= link_to "Submit or edit an abstract", new_attendee_session_url, :class => "btn btn-large btn-success" %></p>
   
   <h3>Abstracts</h3>
   <%= content_tag(:h3, "No abstracts", :class => :alert) if @abstracts && @abstracts.empty?  %>
+  
   <% @abstracts.each do |abstract| %>
     <article class="abstract" id="abstract_<%= abstract.id %>">
     	<p>
@@ -37,7 +38,7 @@
     	  <%= abstract.affiliations %>
     	</p>
         <div class="accordion">
-            <%= render :partial => "abstract", :locals => {:abstract => abstract} %>
+            <%= render :partial => "abstract_body", :locals => {:abstract => abstract} %>
         </div>
     </article>        
   <% end %>
@@ -45,7 +46,7 @@
   <%- content_for :right do -%>
     
     <section id="keyword_cloud">
-      <h2>Keyword Cloud</h2>
+      <h1>Keyword Cloud</h1>
       <% tag_cloud(@keywords, %w(css1 css2 css3 css4 css5 css6 css7)) do |k, css_class| %>
         <%= link_to k.name, keyword_abstracts_url(:keyword => k.name), :class => "#{css_class}", :title => k.name %>
       <% end %>

@@ -14,19 +14,19 @@
       
   	<div id="wed" class='tab-pane <%= "active" if Date.today < Date.new(2013,06,20) %>'>
   		<table class='table table-striped'>
-  		  <%= render "program", :events => @wednesday %>
+  		  <%= render "program", :events => @wednesday unless @wednesday.empty? %>
       </table>
     </div>
 
   	<div id="thu" class='tab-pane <%= "active" if Date.today > Date.new(2013,06,20) && Date.today < Date.new(2013,06,21) %>'>
   		<table class='table table-striped'>
-  		  <%= render "program", :events => @thursday %>  	  			
+  		  <%= render "program", :events => @thursday unless @thursday.empty? %>  	  			
       </table>
     </div>
 
     <div id="fri" class='tab-pane <%= "active" if Date.today > Date.new(2013,06,21) && Date.today < Date.new(2013,06,22) %>'>
   		<table class='table table-striped'>
-  		  <%= render "program", :events => @friday %>  	  			
+  		  <%= render "program", :events => @friday unless @friday.empty? %>
       </table>
     </div>
     

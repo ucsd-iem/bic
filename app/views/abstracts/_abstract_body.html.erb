@@ -1,0 +1,11 @@
+<div id="abstract_body_<%= abstract.id %>" class="accordion-body collapse">
+  <div class="accordion-inner">
+    <%= content_tag :p do %>
+      <b>Keywords</b>&nbsp;
+      <% abstract.keywords.each do |a| %>
+        <%= link_to a.name, keyword_abstracts_url(:keyword => a.name) %>
+      <% end %>
+    <% end unless abstract.keywords.empty? %>
+    <p><%= abstract.body %></p>
+  </div>
+</div>

@@ -1,0 +1,214 @@
+---
+attendees:
+- attendee:
+    last_name: Student
+    suffix: ''
+    currency: USD
+    prefix: Mr.
+    id: 191831651
+    first_name: Grad
+    order_type: Eventbrite Completed
+    event_id: 5146078058
+    blog: ''
+    ticket_id: 17472328
+    event_date: ''
+    email: grad_student@gmail.com
+    job_title: ''
+    website: ''
+    order_id: 150272201
+    company: UC Riverside
+    barcode: '152272601191831651001'
+    answers:
+    - answer:
+        answer_text: Mechanical Engineering
+        question: Department/Major
+        question_type: text
+        question_id: 3380606
+    - answer:
+        answer_text: Wednesday | Thursday | Friday
+        question: Dates of attendance (cost does not change depending upon attendance)
+        question_type: multiple choice
+        question_id: 3244700
+    - answer:
+        answer_text: 'Yes'
+        question: Would you like to submit an abstract?
+        question_type: multiple choice
+        question_id: 3244814
+    - answer:
+        answer_text: Biotechnology | Medical Devices
+        question: Are you interested in meeting with industry from any of the following
+          areas?
+        question_type: multiple choice
+        question_id: 3244832
+    - answer:
+        answer_text: vegetarian or vegan is preferred
+        question: Food Preferences - Do you have any special needs? (e.g. Vegetarian,
+          Vegan, Gluten free, etc.)
+        question_type: text
+        question_id: 3380654
+    - answer:
+        answer_text: 'Yes'
+        question: ! 'Would you like to present your abstract orally? (Note: The program
+          committee will determine which abstracts will be presented orally)'
+        question_type: multiple choice
+        question_id: 3244816
+    - answer:
+        answer_text: 'No'
+        question: Would you like to rent (cost $) a flatscreen for presenting your
+          abstract?
+        question_type: multiple choice
+        question_id: 3244818
+    discount: ''
+    amount_paid: '159.24'
+    created: '2013-03-08 16:16:59'
+    gender: ''
+    age: ''
+    modified: '2013-03-08 16:19:14'
+    affiliate: etckt
+    birth_date: ''
+    cell_phone: '8582267212'
+    notes: ''
+    quantity: 1
+- attendee:
+    first_name: Grad
+    last_name: Student
+    order_type: Eventbrite Completed
+    created: '2013-03-08 16:16:59'
+    order_id: 150272201
+    amount_paid: '164.26'
+    barcode: '150272201191831653001'
+    modified: '2013-03-08 16:19:15'
+    answers: []
+    id: 191831653
+    currency: USD
+    affiliate: etckt
+    ticket_id: 17474148
+    event_id: 5146078058
+    event_date: ''
+    discount: ''
+    email: grad_student@gmail.com
+    quantity: 1
+- attendee:
+    last_name: Gott
+    suffix: ''
+    currency: USD
+    prefix: Ms.
+    id: 189258148
+    first_name: Another
+    order_type: Eventbrite Completed
+    event_id: 5146078058
+    blog: ''
+    ticket_id: 17472328
+    event_date: ''
+    email: another@student.ucr.edu
+    job_title: ''
+    website: ''
+    order_id: 148106302
+    company: University of California, Riverside
+    barcode: '148106302189258148001'
+    answers:
+    - answer:
+        answer_text: Wednesday | Thursday | Friday
+        question: Dates of attendance (cost does not change depending upon attendance)
+        question_type: multiple choice
+        question_id: 3244700
+    - answer:
+        answer_text: 'Yes'
+        question: Would you like to submit an abstract?
+        question_type: multiple choice
+        question_id: 3244814
+    - answer:
+        answer_text: Medical Devices
+        question: Are you interested in meeting with industry from any of the following
+          areas?
+        question_type: multiple choice
+        question_id: 3244832
+    - answer:
+        answer_text: Vegan
+        question: Food Preferences - Do you have any special needs? (e.g. Vegetarian,
+          Vegan, Gluten free, etc.)
+        question_type: text
+        question_id: 3380654
+    - answer:
+        answer_text: 'Yes'
+        question: ! 'Would you like to present your abstract orally? (Note: The program
+          committee will determine which abstracts will be presented orally)'
+        question_type: multiple choice
+        question_id: 3244816
+    - answer:
+        answer_text: 'No'
+        question: Would you like to rent (cost $) a flatscreen for presenting your
+          abstract?
+        question_type: multiple choice
+        question_id: 3244818
+    discount: ''
+    amount_paid: '159.24'
+    created: '2013-03-04 18:23:58'
+    gender: ''
+    age: ''
+    modified: '2013-03-04 18:30:31'
+    affiliate: etckt
+    birth_date: ''
+    cell_phone: ''
+    notes: ''
+    quantity: 1
+- attendee:
+    first_name: Another
+    last_name: Gott
+    order_type: Eventbrite Completed
+    created: '2013-03-04 18:23:58'
+    order_id: 148106302
+    amount_paid: '164.26'
+    barcode: '148106302189258150001'
+    modified: '2013-03-04 18:30:31'
+    answers: []
+    id: 189258150
+    currency: USD
+    affiliate: etckt
+    ticket_id: 17474148
+    event_id: 5146078058
+    event_date: ''
+    discount: ''
+    email: another@student.ucr.edu
+    quantity: 1
+- attendee:
+    last_name: Faculty
+    suffix: ''
+    currency: USD
+    prefix: Dr.
+    id: 189526840
+    first_name: UCSD
+    order_type: Eventbrite Completed
+    event_id: 5146078058
+    blog: ''
+    ticket_id: 17474082
+    event_date: ''
+    email: faculty@ucsd.edu
+    job_title: ''
+    website: ''
+    order_id: 148338572
+    company: UCSD
+    barcode: '148338572189526840001'
+    answers:
+    - answer:
+        answer_text: Wednesday | Thursday | Friday
+        question: Dates of attendance (cost does not change depending upon attendance)
+        question_type: multiple choice
+        question_id: 3244700
+    - answer:
+        answer_text: Allergic to garlic
+        question: Food Preferences - Do you have any special needs? (e.g. Vegetarian,
+          Vegan, Gluten free, etc.)
+        question_type: text
+        question_id: 3380654
+    discount: ''
+    amount_paid: '185.62'
+    created: '2013-03-05 07:38:11'
+    gender: ''
+    age: ''
+    modified: '2013-03-05 07:40:25'
+    affiliate: etckt
+    birth_date: ''
+    cell_phone: 858-858-5493
+    notes: ''
+    quantity: 1

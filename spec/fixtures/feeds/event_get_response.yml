@@ -1,0 +1,137 @@
+---
+event:
+  box_header_text_color: 005580
+  link_color: EE6600
+  box_background_color: FFFFFF
+  box_border_color: D5D5D3
+  timezone: America/Los_Angeles
+  organizer:
+    url: http://www.eventbrite.com/org/3052229084
+    description: ''
+    long_description: ''
+    id: 3052229084
+    name: UC San Diego
+  background_color: FFFFFF
+  id: 5146078058
+  category: reunions,conferences
+  box_header_background_color: EFEFEF
+  capacity: 0
+  num_attendee_rows: 5
+  title: 14th UC Systemwide Bioengineering Symposium
+  start_date: '2013-06-19 08:00:00'
+  status: Live
+  description: ! '<P STYLE="margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-size:
+    14px; font-family: ''PT Serif'', Helvetica, Arial, sans-serif; vertical-align:
+    baseline; color: #333333;">The <A HREF="http://bic.ucop.edu/2013">14th UC Systemwide
+    Bioengineering Symposium</A> in 2013 will take place on the campus of UC San Diego.
+    You are cordially invited to participate, establish collaborations, renew old
+    and make new friendships. There will be exciting speakers as well as many opportunities
+    for students to present posters, give flat screen posters and oral presentations.
+    Please visit the website (<A HREF="http://bic.ucop.edu/2013">http://bic.ucop.edu/2013</A>)
+    for more information.</P>'
+  end_date: '2013-06-21 17:00:00'
+  tags: ''
+  timezone_offset: GMT-0700
+  text_color: 005580
+  title_text_color: ''
+  tickets:
+  - ticket:
+      description: ''
+      end_date: '2013-06-19 07:00:00'
+      min: 1
+      max: 
+      price: '80.12'
+      quantity_sold: 0
+      visible: 'true'
+      currency: USD
+      quantity_available: 200
+      type: 0
+      id: 17474092
+      name: Undergraduate Student
+  - ticket:
+      description: ''
+      end_date: '2013-06-19 07:00:00'
+      min: 1
+      max: 
+      price: '159.24'
+      quantity_sold: 2
+      visible: 'true'
+      currency: USD
+      quantity_available: 200
+      type: 0
+      id: 17474098
+      name: Graduate Student
+  - ticket:
+      description: ''
+      end_date: '2013-06-19 07:00:00'
+      min: 1
+      max: 
+      price: '185.62'
+      quantity_sold: 1
+      visible: 'true'
+      currency: USD
+      quantity_available: 300
+      type: 0
+      id: 17474082
+      name: UC Faculty
+  - ticket:
+      description: ''
+      end_date: '2013-06-19 07:00:00'
+      min: 1
+      max: 
+      price: '211.99'
+      quantity_sold: 0
+      visible: 'true'
+      currency: USD
+      quantity_available: 300
+      type: 0
+      id: 17474116
+      name: Non-UC Faculty / Industry
+  - ticket:
+      description: STUDENTS ONLY.  Cost is for two nights.  A third night is possible,
+        but attendees will have to pay with cash upon checking in at Earl's Place.
+        Capacity is limited.
+      end_date: '2013-06-19 07:00:00'
+      min: 1
+      max: 0
+      price: '164.26'
+      quantity_sold: 2
+      visible: 'true'
+      currency: USD
+      quantity_available: 200
+      type: 0
+      id: 17474148
+      name: Lodging in Warren Dormitory
+  - ticket:
+      description: STUDENTS ONLY. Available to students who wish to perform a multimedia-rich
+        presentation.
+      end_date: '2013-06-19 07:00:00'
+      min: 1
+      max: 0
+      price: '22.09'
+      quantity_sold: 0
+      visible: 'true'
+      currency: USD
+      quantity_available: 50
+      type: 0
+      id: 17474160
+      name: Flatscreen Display Rental
+  created: '2013-01-03 15:00:54'
+  url: http://bic2013.eventbrite.com
+  box_text_color: '000000'
+  privacy: Public
+  venue:
+    city: San Diego
+    name: UC San Diego Price Center
+    country: United States
+    region: CA
+    longitude: -117.23573
+    postal_code: '92037'
+    address_2: ''
+    address: 9500 Gilman Dr
+    latitude: 32.874161
+    country_code: US
+    id: 2805232
+    Lat-Long: 32.874161 / -117.23573
+  modified: '2013-03-08 16:19:15'
+  repeats: 'no'

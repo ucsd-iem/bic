@@ -1,7 +1,8 @@
 class AbstractsController < ApplicationController
 
-  before_filter :authenticate_user!, :except => [:index, :new, :edit, :create, :update, :show, :keyword, :search, :submit, :verify]
-  before_filter :find_attendee, :only => [:new, :create, :update, :destroy]
+  #Filter chain halted as :require_no_authentication rendered or redirected 
+  before_filter :authenticate_attendee!, :except => [:index, :keyword, :search, :submit, :verify]
+  before_filter :find_attendee, :only => [:new, :create, :edit, :update, :destroy]
   before_filter :tag_cloud, :only => [:index, :keyword, :search]
 
   # GET /abstracts
@@ -29,10 +30,7 @@ class AbstractsController < ApplicationController
   # GET /abstracts/new
   # GET /abstracts/new.json
   def new
-#    redirect_to :action => :submit unless @attendee
-    
-    @abstract = Abstract.new(:email => @attendee.email, :order_id => @attendee.order_id )
-    logger.info "ATTENDEE ID: #{@attendee.id}"
+    @abstract = current_attendee.abstracts.build(params[:abstract])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -43,14 +41,12 @@ class AbstractsController < ApplicationController
   # GET /abstracts/1/edit
   def edit
     @abstract = Abstract.find(params[:id])
-    @attendee = @abstract.attendee  
   end
 
   # POST /abstracts
   # POST /abstracts.json
   def create
-    @abstract = Abstract.new(params[:abstract])
-    logger.info "ATTENDEE ID: #{@attendee.id}"
+    @abstract = current_attendee.abstracts.build(params[:abstract])
     
     respond_to do |format|
       if @abstract.save
@@ -90,10 +86,9 @@ class AbstractsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+    
   def keyword
     @abstracts = Abstract.tagged_with(params[:keyword])
-#    @abstracts_2010 = Abstract.tagged_with(params[:keyword]).where(:year => 2010).order(:position)
     
     respond_to do |format|
       format.html { render action: :index}
@@ -109,16 +104,19 @@ class AbstractsController < ApplicationController
     end    
   end
 
+  def submit
+    @attendee = Attendee.new(params[:attendee])
+  end
+  
   def verify
-    Attendee.import
   	params[:order_id].include?('-') ? order_id = params[:order_id].split('-').last : order_id = params[:order_id]     
-    @attendee = Attendee.find_by_email_and_order_id(params[:email], order_id)
+    @attendee = Attendee.find_by_email(params[:email])
     
     if @attendee
-      if @attendee.abstract
+      if @attendee.abstracts.first
         redirect_to edit_abstract_url(@attendee.abstract), :notice => "Welcome back. Please update your abstract data using the form below."        
       else
-        redirect_to new_abstract_url(:abstract => { :email => @attendee.email, :order_id => @attendee.order_id } ), :notice => "Great, we found your order. Please add your abstract data using the form below."
+        redirect_to new_abstract_url(:abstract => {:email => @attendee.email} ), :notice => "Great, we found your order. Please add your abstract data using the form below."
       end
     else      
       redirect_to :back, :notice => "No order found with that id and email. Are you sure that you have registered using eventbrite?"
@@ -128,19 +126,7 @@ class AbstractsController < ApplicationController
   protected
   
   def find_attendee
-    if params[:abstract] && params[:abstract][:email]
-      @attendee = Attendee.find_by_email_and_order_id(params[:abstract][:email], params[:abstract][:order_id])    
-
-      unless @attendee   
-        # require an orderid+email in our db
-        redirect_to submit_abstracts_url, :notice => "You must provide an order ID and email associated with your Eventbrite registration to proceed."
-      else
-        @attendee      
-      end
-    else
-      # catch those that manually go to a page that requires @attendee
-      redirect_to submit_abstracts_url, :notice => "You must provide an order ID and email associated with your Eventbrite registration to proceed." 
-    end
+    redirect_to new_attendee_session_url, :notice => "You must provide an order ID and email associated with your Eventbrite registration to proceed." unless current_attendee
   end
   
   def tag_cloud
