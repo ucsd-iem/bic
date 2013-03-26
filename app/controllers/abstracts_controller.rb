@@ -30,8 +30,7 @@ class AbstractsController < ApplicationController
   # GET /abstracts/new
   # GET /abstracts/new.json
   def new
-    @abstract = Abstract.new(:email => current_attendee.email)
-    logger.info "ATTENDEE ID: #{current_attendee.id}"
+    @abstract = current_attendee.abstracts.build(params[:abstract])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -47,8 +46,7 @@ class AbstractsController < ApplicationController
   # POST /abstracts
   # POST /abstracts.json
   def create
-    @abstract = Abstract.new(params[:abstract])
-    logger.info "ATTENDEE ID: #{current_attendee.id}"
+    @abstract = current_attendee.abstracts.build(params[:abstract])
     
     respond_to do |format|
       if @abstract.save

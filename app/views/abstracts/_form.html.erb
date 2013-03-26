@@ -11,12 +11,12 @@
     </div>
   <% end %>
   
-  
   <h2><%= current_attendee.name %> / <%= current_attendee.email %></h2>
   
   <div class="control-group">
     <%= f.text_field :title, :class => 'input-xxlarge', :placeholder => 'Title' %>
   </div>
+  
   <div class="control-group">
     <%#= f.label :authors, "Author(s)" %>
     <%= f.text_field :authors, :class => 'input-xxlarge', :placeholder => 'Authors' %>
@@ -48,7 +48,7 @@
   <div class='row'>
       <div class="span7">
     	<%= f.label :poster, "Poster (PDF or Powerpoint)", :class => "alert-info" %>
-    	<%= f.file_field :poster %>    
+    	<%= f.file_field :poster %>
       </div>
   </div>
 
@@ -56,6 +56,17 @@
   
   <div class="actions">
     <%= f.submit :class => 'btn btn-success' %>
+    <%= link_to('Delete Abstract', @abstract, :method => :delete, :class => 'btn btn-small btn-danger', :confirm => 'This will permanently destroy the data related to this abstract.') if params[:action] == 'edit' %>
   </div>
 
 <% end %>
+
+
+<%- content_for :right do -%>
+    <%- unless current_attendee.abstracts.empty? || current_attendee.abstract.id == nil -%>
+        <section id="abstracts">
+            <h1>Your Abstracts</h1>
+            <%= content_tag :ul, render(current_attendee.abstracts) %>
+        </section>
+    <%- end -%>
+<%- end -%>
