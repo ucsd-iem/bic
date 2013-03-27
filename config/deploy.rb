@@ -9,6 +9,7 @@ set :repository,  "https://github.com/ucsd-iem/bic.git"
 set :branch, :dev
 set :domain, 'vishnu.ucsd.edu'
 set :deploy_to, "/var/rails/#{application}" # I like this location
+set :deploy_via, :remote_cache
 set :user, "ubuntu"
 set :keep_releases, 6
 set :rvm_ruby_string, "1.9.3@#{application}"
@@ -46,5 +47,5 @@ namespace :deploy do
   end
 end
 
-after 'bundle:install', 'deploy:symlink_db'
+after 'bundle:install', 'deploy:symlink_configs'
 after 'deploy:setup', 'deploy:add_shared_config'
