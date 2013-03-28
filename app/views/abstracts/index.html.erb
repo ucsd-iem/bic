@@ -1,33 +1,7 @@
 <section id='abstracts'>
-	<h1>Abstracts <%= "matching keyword: #{params[:keyword]}" if params[:keyword] %></h1>
-	
-	<p>Individuals <%= link_to "submitting abstracts", new_attendee_session_url %> for poster presentations have the option of renting a flat screen TV for $20 to display their poster electronically (in lieu of a printed poster).  All abstracts are due by <span class='alert-info'>April&nbsp;29</span>.</p>
-	<p>We invite original contributions in any area of bioengineering, including but not limited to: <em>Bioengineering Analysis of Disease</em>,
-    <em>Bioinformatics</em>,
-    <em>Biomaterials</em>,
-    <em>Biomechanics &amp; Biophysics</em>,
-    <em>Biomedical Devices</em>,
-    <em>BioMEMS</em>,
-    <em>Biosensors</em>,
-    <em>Cardiovascular Engineering</em>,
-    <em>Cell Mechanics and Engineering</em>,
-    <em>Computational Biology</em>,
-    <em>Drug Delivery</em>,
-    <em>Genomics and Genomic–wide Analysis</em>,
-    <em>Imaging</em>,
-    <em>Microcirculation and Tissue Transport</em>,
-    <em>Modeling and Multiscale analysis</em>,
-    <em>Metabolic Engineering</em>,
-    <em>Nanobiotechnology</em>,
-    <em>Stem Cell Engineering</em>,
-    <em>Synthetic Biology</em>,
-    <em>Systems Biology</em>, and
-    <em>Tissue Engineering</em>.
-  </ul>
+  <p class='pull-right'><%= link_to "Submit or edit an abstract", new_attendee_session_url, :class => "btn btn-large btn-success" %></p>
+  <h1>Abstracts <%= "matching keyword: #{params[:keyword]}" if params[:keyword] %></h1>
   
-   <p><%= link_to "Submit or edit an abstract", new_attendee_session_url, :class => "btn btn-large btn-success" %></p>
-  
-  <h3>Abstracts</h3>
   <%= content_tag(:h3, "No abstracts", :class => :alert) if @abstracts && @abstracts.empty?  %>
   
   <% @abstracts.each do |abstract| %>
