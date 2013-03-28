@@ -40,11 +40,6 @@
     <%= f.text_area :personal_statement, :rows => 4, :class => 'input-xxlarge', :placeholder => "Personal Statement: Describe in a few words why your research should be chosen for an oral presentation" %>
   </div>
 
-  <div class="control-group">
-    <%#= f.label :authors, "Author(s)" %>
-	<%= f.text_field :video_url, :class => 'input-xxlarge', :placeholder => 'Video Presentation URL (e.g. Vimeo or Youtube link)' %>	
-  </div>
-
   <div class='row'>
       <div class="span7">
     	<%= f.label :poster, "Poster (PDF or Powerpoint)", :class => "alert-info" %>
@@ -63,7 +58,7 @@
 
 
 <%- content_for :right do -%>
-    <%- unless current_attendee.abstracts.empty? || current_attendee.abstract.id == nil -%>
+    <%- unless current_attendee.abstracts.empty? %>
         <section id="abstracts">
             <h1>Your Abstracts</h1>
             <%= content_tag :ul, render(current_attendee.abstracts) %>

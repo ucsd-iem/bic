@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
         end
         
       else
-        super
+        super 
       end
   end
 
@@ -29,8 +29,8 @@ class ApplicationController < ActionController::Base
   end
   
   def load_sponsors
-    @dinner_sponsors = Sponsor.where(:level => 'Dinner Sponsor').order('name ASC')
-    @foundational = Sponsor.where(:level => 'Foundational').order('name ASC')
-    @supporting = Sponsor.where(:level => 'Supporting').order('name ASC')
+    @dinner_sponsors = Sponsor.dinner
+    @foundational = Sponsor.foundational
+    @supporting = Sponsor.supporting
   end
 end

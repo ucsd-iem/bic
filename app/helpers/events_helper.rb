@@ -1,12 +1,12 @@
 module EventsHelper
   
-  def abbreviate(string)
-    abbreviated_words = { "Institue of Engineering in Medicine" => "IEM", "Departments of" => "Depts.", "Department of" => "Dept.", "Institute of" => "Inst."}
+  def abbreviate(sentence)
+    abbreviated_words = { "Institue of Engineering in Medicine" => "IEM", "Departments of" => "Depts.", "Department of" => "Dept.", "Institutes of" => "Insts.", "Institute of" => "Inst."}
     
     abbreviated_words.each do |k,v|
-      string = string.gsub(k,v)
+      sentence = sentence.gsub(k,v)
     end
-    string
+    sentence
   end
   
   def build_table(events)

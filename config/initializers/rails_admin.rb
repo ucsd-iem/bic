@@ -54,14 +54,114 @@ RailsAdmin.config do |config|
   # Anyway, here is how RailsAdmin saw your application's models when you ran the initializer:
   
   ###  User  ###
+  
+  config.model 'Abstract' do
+    edit do
+      field :title
+      field :authors
+      field :affiliations
+      field :keyword_list
+      field :body
+      field :year
+      field :position
+      field :email
+      field :event do
+        nested_form false
+      end
+    end
+    
+    list do
+ #     field :dynamic_title do
+#        label "Title"
+#      end
+      sort_by :position
+    end
+    
+#    object_label_method do
+#      :dynamic_title
+#    end
+  end # config.model 'Abstract'
 
+  config.model 'Event' do
+    edit do
+      field :title, :text
+      field :start do
+        default_value do
+          DateTime.new(2013,6,19,12,00)
+        end
+      end
+      field :stop do
+        default_value do
+          Time.now
+        end
+      end
+      field :location
+
+      field :abstracts do
+        nested_form false
+      end
+#      field :moderators do
+#        nested_form false
+#      end    
+    end
+
+    list do
+      field :dynamic_title do
+        label "Title"
+      end
+
+      sort_by :start
+      sort_reverse false
+    end
+
+    object_label_method do
+      :dynamic_title
+    end
+  end
+    
+  config.model 'Moderator' do
+    object_label_method do
+      :name
+    end
+    field :first_name
+    field :middle_name
+    field :last_name
+    field :affiliaiton
+    field :biosketch
+    field :photo
+
+#    field :event do
+ #     nested_form false
+  #  end
+  end
+    
+    
+  config.model 'Sponsor' do
+    edit do
+      field :name
+      field :url
+      field :level, :enum do
+        enum do
+          %w{ Dinner\ Sponsor Foundational Supporting }
+        end
+      end
+      field :logo
+      field :tagline do
+        html_attributes rows: 2
+      end
+      field :mission_statement do
+        html_attributes rows: 6
+#        ckeditor true
+      end
+      include_all_fields
+    end
+  end    
+    
   # config.model 'User' do
 
   #   # You can copy this to a 'rails_admin do ... end' block inside your user.rb model definition
   
   #   # Found associations:
-
-
 
   #   # Found columns:
 

@@ -7,7 +7,7 @@
   <% @abstracts.each do |abstract| %>
     <article class="abstract" id="abstract_<%= abstract.id %>">
     	<p>
-    	  <%= abstract.session_title %> <%=link_to "#{abstract.title}", "#abstract_body_#{abstract.id}", :class => "accordion-toggle", 'data-toggle' => "collapse", 'data-parent' => "#abstracts" %>,
+    	  <%=link_to "#{abstract.title}", "#abstract_body_#{abstract.id}", :class => "accordion-toggle", 'data-toggle' => "collapse", 'data-parent' => "#abstracts" %>,
     	  <b><%= abstract.authors.gsub(/ \^[0-9,†]*\^/,'') %></b>.
     	  <%= abstract.affiliations %>
     	</p>
