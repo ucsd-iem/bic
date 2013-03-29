@@ -6,6 +6,7 @@ gem 'mysql2'
 gem 'acts_as_indexed'
 gem 'acts-as-taggable-on'
 gem 'carmen'
+gem 'ckeditor'
 gem 'client_side_validations'
 gem 'cocaine', :git => 'git://github.com/thoughtbot/cocaine.git' 
 gem 'capistrano'
@@ -46,8 +47,8 @@ end
 
 group :test, :development do
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
   gem 'faker'
+  gem 'factory_girl_rails'
   gem "rspec-rails", "~> 2.0"
   gem 'rb-fchange', :require => false
   gem 'rb-fsevent', :require => false

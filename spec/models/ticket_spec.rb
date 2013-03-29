@@ -61,7 +61,7 @@ describe Ticket do
       @ticket.should be_valid
     end
     
-    # it should be valid with the required attributes: :attendee_id, :barcode, :eid, :event_id, :order_id, :quantity, :ticket_id
+    # it should NOT be valid without the required attributes: :attendee_id, :barcode, :eid, :event_id, :order_id, :quantity, :ticket_id
     required_keys.each do |m|
       it "should NOT be valid without the required attribute #{m}" do   
         @ticket.attributes = valid_ticket_attributes.except(m)

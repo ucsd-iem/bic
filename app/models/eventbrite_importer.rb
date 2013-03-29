@@ -1,15 +1,8 @@
 class EventbriteImporter
     
   class << self
-    attr_reader :cache_freq
-    attr_accessor :last_attendees_request
-
     def client
       @client || init_client
-    end
-
-    def heartbeat?
-      @heartbeat || false
     end
 
     def auth_tokens
@@ -69,14 +62,8 @@ class EventbriteImporter
     end
     
     def init_client
-      @cache_freq = 3.0
-      @heartbeat = true if @client = EventbriteClient.new(self.auth_tokens)
-      @client
-    end
-    
-    def time_since_last_attendees_request
-      @last_request.nil? ? @cache_freq+0.1 : Time.now - @last_request
-    end
+      @client = EventbriteClient.new(self.auth_tokens)
+    end    
   end # end class << self
 end
 

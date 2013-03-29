@@ -1,0 +1,7 @@
+<li class='sponsor'>
+  <%= link_to image_tag(sponsor.logo, :title => sponsor.name), sponsor.url %>
+  <p>
+    <%= tagline_truncated_mission_statement(sponsor) %>
+    <%= link_to content_tag(:span, 'more', :class => 'alert-info'), sponsor.url, 'data-toggle' => :popover, 'data-placement' => :top, 'data-content' => '.', :title => nil, 'data-original-title' => sponsor.mission_statement, :class => :more %>
+  </p>
+</li>
