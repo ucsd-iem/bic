@@ -16,24 +16,22 @@
 //= require rails.validations
 //= require_tree .
 
-
 $(document).ready(function() {
 
-
 if(!Modernizr.input.placeholder){
-$("input").each(
-function(){
-if($(this).val()=="" && $(this).attr("placeholder")!=""){
-$(this).val($(this).attr("placeholder"));
-$(this).focus(function(){
-if($(this).val()==$(this).attr("placeholder")) $(this).val("");
+  $("input").each(
+    function(){
+      if($(this).val()=="" && $(this).attr("placeholder")!=""){
+        $(this).val($(this).attr("placeholder"));
+        $(this).focus(function(){
+        if($(this).val()==$(this).attr("placeholder")) 
+          $(this).val("");
+        });
+        $(this).blur(function(){
+        if($(this).val()=="") 
+          $(this).val($(this).attr("placeholder"));
+        });
+      }
+    });
+  }
 });
-$(this).blur(function(){
-if($(this).val()=="") $(this).val($(this).attr("placeholder"));
-});
-}
-});
-}
-});
-
-
