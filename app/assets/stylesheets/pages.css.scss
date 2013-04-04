@@ -17,9 +17,10 @@
   li { float:left; list-style-type: none; margin:20px; width:260px; 
     img { margin:10px 0; }
     a { clear:both; display:block; }
+    a.more { display:inline; }
   }
   
   
 }
-.tooltip-inner { text-align:left; }
+.tooltip-inner { font-size: 1.2em; max-width:360px; text-align:left; }
 .tooltip.in { opacity: 0.9; }

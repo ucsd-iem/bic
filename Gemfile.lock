@@ -69,6 +69,9 @@ GEM
       net-ssh-gateway (>= 1.1.0)
     carmen (0.2.13)
     chronic (0.9.1)
+    ckeditor (4.0.2)
+      mime-types
+      orm_adapter
     client_side_validations (3.2.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -325,6 +328,7 @@ DEPENDENCIES
   capistrano
   capybara!
   carmen
+  ckeditor
   client_side_validations
   cocaine!
   coffee-rails (~> 3.2.1)
