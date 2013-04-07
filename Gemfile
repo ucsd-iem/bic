@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 
 gem 'mysql2'
 gem 'acts_as_indexed'
@@ -39,6 +39,9 @@ group :development do
   gem 'debugger'
   gem 'map_by_method'
   gem 'meta_request'
+  gem 'rb-fchange', :require => false
+  gem 'rb-fsevent', :require => false
+  gem 'rb-inotify', :require => false
   gem 'ruby_gntp'
   gem 'simplecov'
   gem 'what_methods'
@@ -46,16 +49,14 @@ group :development do
 end
 
 group :test, :development do
+  end
+
+group :test do
   gem 'database_cleaner'
   gem 'faker'
   gem 'factory_girl_rails'
   gem "rspec-rails", "~> 2.0"
-  gem 'rb-fchange', :require => false
-  gem 'rb-fsevent', :require => false
-  gem 'rb-inotify', :require => false
-end
 
-group :test do
   gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
   gem 'guard-livereload'
   gem 'guard-rspec'
