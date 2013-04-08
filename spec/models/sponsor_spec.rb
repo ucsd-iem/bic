@@ -20,4 +20,7 @@ describe Sponsor do
       sponsor.should_not be_valid
     end
   end
+  
+
+
 end

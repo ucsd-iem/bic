@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130330155920) do
+ActiveRecord::Schema.define(:version => 20130408084612) do
 
   create_table "abstracts", :force => true do |t|
     t.string   "title"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20130330155920) do
     t.string   "presenter_middle_name"
     t.string   "presenter_last_name"
     t.string   "presenter_affiliation"
+    t.integer  "event_id"
   end
 
   create_table "announcements", :force => true do |t|

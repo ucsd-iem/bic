@@ -27,14 +27,12 @@ class Notification < ActionMailer::Base
   def abstract_confirmation(abstract)
     @abstract = abstract
     
-    mail(:to => abstract.email, :subject => "14th UC Systemwide Bioengineering Symposium, June 19-21 - We have received your abstract")
+    mail(:to => abstract.attendee.email, :subject => "14th UC Systemwide Bioengineering Symposium, June 19-21 - We have received your abstract")
   end
   
   def abstract_update(abstract)
     @abstract = abstract
 
-    mail(:to => abstract.email, :subject => "14th UC Systemwide Bioengineering Symposium, June 19-21 - We have received your abstract update")
+    mail(:to => abstract.attendee.email, :subject => "14th UC Systemwide Bioengineering Symposium, June 19-21 - We have received your abstract update")
   end
-  
-  
 end

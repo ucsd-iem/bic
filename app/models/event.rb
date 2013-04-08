@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
-  attr_accessible :location, :start, :stop, :title, :moderator_ids
-#  belongs_to :abstract, :inverse_of => :event
-  has_many :moderators
+  attr_accessible :abstract_ids, :location, :start, :stop, :title, :moderator_ids
+  has_many :abstracts
+  # has_many :moderators
   validates :start, :presence => true
   validates :stop, :presence => true
 
@@ -10,40 +10,6 @@ class Event < ActiveRecord::Base
   scope :on_wednesday, lambda {  where("start < ?", DateTime.new(2013,6,20)+7.hours).order("start ASC") }
   scope :on_thursday, lambda {  where("start > ? AND stop < ?", DateTime.new(2013,6,20)+7.hours, DateTime.new(2013,6,21)+7.hours).order("start ASC") }
   scope :on_friday, lambda {  where("start > ?", DateTime.new(2013,6,21)+7.hours).order("start ASC") }
-
-  rails_admin do
-    edit do
-      field :title, :text
-      field :start do
-        default_value do
-          DateTime.new(2013,6,19,12,00)
-        end
-      end
-      field :stop do
-        default_value do
-          Time.now
-        end
-      end
-      field :location
-#      field :abstract
-      field :moderators do
-        nested_form false
-      end    
-    end
-    
-    list do
-      field :dynamic_title do
-        label "Title"
-      end
-
-      sort_by :start
-      sort_reverse false
-    end
-    
-    object_label_method do
-      :dynamic_title
-    end
-  end
   
   def name
     "#{self.id} - #{self.title} - #{self.start}"
@@ -86,18 +52,18 @@ class Event < ActiveRecord::Base
   
   # returns duration of event in hours
   def duration
-    (self.stop - self.start) / 1.hour
+    self.stop - self.start
   end
 
   def moderators_data
-    case 
-    when self.moderators.count > 1
-      "<span class='moderator_label'>Moderators</span> #{self.moderators.collect {|e| e.name}.join(', ')}"
-    when self.moderators.count == 1
-      "<span class='moderator_label'>Moderator</span> #{self.moderators.first.name}"
-    when self.moderators.count == 0
-      nil
-    end
+  #  case 
+  #  when self.moderators.count > 1
+  #    "<span class='moderator_label'>Moderators</span> #{self.moderators.collect {|e| e.name}.join(', ')}"
+  #  when self.moderators.count == 1
+  #    "<span class='moderator_label'>Moderator</span> #{self.moderators.first.name}"
+  #  when self.moderators.count == 0
+  #    nil
+  #  end
   end
   
   def table_data(colspan = nil, row = nil, time)
@@ -132,7 +98,7 @@ class Event < ActiveRecord::Base
     if title_row?(time)
       html << "#{self.title}<br />" if self.title 
       html << "#{self.location}<br />" if self.location
-      html << "#{self.moderators_data}" if self.moderators
+      #html << "#{self.moderators_data}" if self.moderators
     else
       html << ""
     end
@@ -153,7 +119,7 @@ class Event < ActiveRecord::Base
  
     html << "#{self.title}<br />" if self.title 
     html << "#{self.location}<br />" if self.location
-    html << "#{self.moderators_data}" if self.moderators
+    #html << "#{self.moderators_data}" if self.moderators
 
     html << "</div>"
         
@@ -315,7 +281,7 @@ class Event < ActiveRecord::Base
               list_row << "<div class='event_block_multiple'>"
               list_row << "#{tg_event.title}<br />"
               list_row << "#{tg_event.location if tg_event.location}<br />"
-              list_row << "#{tg_event.moderators_data if tg_event.moderators.exists?}"
+              # list_row << "#{tg_event.moderators_data if tg_event.moderators.exists?}"
               list_row << "</div>"
             end
             list_row << '</td>'
@@ -329,7 +295,7 @@ class Event < ActiveRecord::Base
             list_row << "<div class='event_block'>"
             list_row << e.title + "<br />"  if e.title
             list_row << e.location + "<br />" if e.location
-            list_row << e.moderators_data if e.moderators.exists?
+            # list_row << e.moderators_data if e.moderators.exists?
             list_row << "</div>"
             list_row << '</td>'
           end

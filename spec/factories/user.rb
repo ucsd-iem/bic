@@ -1,9 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :attendee do
-    first_name { Faker::Name.first_name }
-    last_name { Faker::Name.last_name }
+  factory :user do
     email { Faker::Internet.email }
     password { Faker::Lorem.words(6).join('-') }
   end
