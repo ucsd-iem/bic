@@ -66,55 +66,7 @@ class Event < ActiveRecord::Base
   #  end
   end
   
-  def table_data(colspan = nil, row = nil, time)
-    html = "<td class='event'"
-    html << " colspan=#{colspan}" if colspan
-    html << ">"
-    
-    html << "<div class='e_#{self.id} t_#{time.strftime('%H_%M')} event"
-    
- 
-    # add css to specify if it's the top, middle or bottom of the event.
-    case
-    when self.quarter_before_start?(time)
-      html << " top quarter_before_start"      
-    when self.quarter_start?(time)
-      html << " quarter_start top"
-    when self.quarter_end?(time)
-      html << " quarter_end bottom"
-    when self.title_row?(time)  
-      html << " top"
-    when self.end_row?(time)
-      html << " bottom"
-    else
-      html << ""  
-    end
-
-    html << "'>"
-    
-#    case self.start
- #   html << " quarter-hour" if ['15','45'].include? self.duration.to_s.split('.').last
-
-    if title_row?(time)
-      html << "#{self.title}<br />" if self.title 
-      html << "#{self.location}<br />" if self.location
-      #html << "#{self.moderators_data}" if self.moderators
-    else
-      html << ""
-    end
-
-    html << "</div></td>"
-    
-    # add filler cell(s) if there's whitespace to the right
-    if Event.by_time(time).count <= self.alternate_events.count
-      html << "<td colspan='2' class='filler'>&nbsp;</td>" 
-    end
-    
-    html
-  end
-
-  
-  def list_data(time)    
+  def list_data(time)
     html = "<div class='e_#{self.id} t_#{time.strftime('%H_%M')} event_data'>"
  
     html << "#{self.title}<br />" if self.title 
@@ -142,8 +94,6 @@ class Event < ActiveRecord::Base
       true
     when -900.seconds
       true
-    when self.stop
-      false
     else
       false
     end      
@@ -154,7 +104,7 @@ class Event < ActiveRecord::Base
     self.start.strftime('%M') == '15' && self.title_row?(time)
   end
 
-  # does this row start 15 minutes after the hour?
+  # does this row start 45 minutes after the hour?
   def quarter_before_start?(time)
     self.start.strftime('%M') == '45' && self.title_row?(time)
   end
@@ -188,22 +138,6 @@ class Event < ActiveRecord::Base
       raise "You gotta give me some events if you want a range, perhaps I should just give you nil in return?" if events.nil?
       Event.start_of_day(events)..Event.end_of_day(events)
     end
-    
-    def time_slots(events)
-      range = Event.range(events)
-      width = Event.width(events)
-
-      time_slots = []
-
-      time = range.begin
-
-      while time <= (range.end+1.minute) do
-        time_slots << time
-        time += + 30.minutes
-      end
-      
-      time_slots.sort
-    end
 
     def time_slots_15(events)
       range = Event.range(events)
@@ -220,43 +154,7 @@ class Event < ActiveRecord::Base
       
       time_slots.sort
     end
-    
-    def by_time(time, events = Event.all)
-      events_for_this_time = []
-      events.map { |e| events_for_this_time << e if (e.start..(e.stop-1.second)).cover?(time) || e.start == time + 15.minutes }
-      events_for_this_time.sort_by {|e| e.start}.sort_by {|e| e.title}
-    end
-    
-    alias_method :row_width, :by_time
 
-    def starting_events_by_time(time, events = Event.all)
-      starting_events_by_time = []
-      events.map { |e| starting_events_by_time << e if e.start == time }
-      starting_events_by_time.sort_by {|e| e.start}.sort_by {|e| e.title}      
-    end
-    
-    def table_row(time, row, table_width)
-      events = Event.by_time(time)
-#      Event.by_time(time).count == 0 ? colspan = 1 : colspan = table_width.to_i / Event.by_time(time).count
-      
-      table_row = "<tr><td class='time'>#{time.strftime('%I:%M %p')}</td>"
-      
-      events.each do |e|
-        alt = e.alternate_events.count
-        case 
-        when alt > 2
-          table_row << e.table_data(1, row, time)
-        when alt > 0
-          table_row << e.table_data(2, row, time)
-        else
-          table_row << e.table_data(4, row, time)
-        end
-      end
-      
-      table_row << "</tr>"
-      table_row
-    end
-       
     def list_row(time)
       # if any events start during this time?      
       if events = Event.where(:start => time)
@@ -285,12 +183,12 @@ class Event < ActiveRecord::Base
               list_row << "</div>"
             end
             list_row << '</td>'
-        end
+          end
           
         else
           events.each do |e|
             list_row << "<tr><td class='list_time'>#{e.start.strftime('%I:%M')} - #{e.stop.strftime('%I:%M %p')}</td>"
-          
+        
             list_row << "<td class='event_row'>"
             list_row << "<div class='event_block'>"
             list_row << e.title + "<br />"  if e.title
@@ -299,10 +197,10 @@ class Event < ActiveRecord::Base
             list_row << "</div>"
             list_row << '</td>'
           end
-        end
+        end # if events.count > 1
         
         list_row
-      end
+      end # events = Event.where(:start => time)
     end 
     
     # returns the maximum

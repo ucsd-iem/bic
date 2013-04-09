@@ -9,4 +9,5 @@ class Sponsor < ActiveRecord::Base
   scope :dinner, where(:level => 'Dinner Sponsor').order('name ASC')
   scope :foundational, where(:level => 'Foundational').order('name ASC')
   scope :supporting, where(:level => 'Supporting').order('name ASC')
+  
 end

@@ -7,5 +7,6 @@ FactoryGirl.define do
     email Faker::Internet.email
     level 'Supporting'
     logo File.new(Rails.root + 'spec/fixtures/images/rails.png')
+    mission_statement Faker::Lorem.sentences(5).join(' ')
   end
 end
