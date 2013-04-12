@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   before_filter :load_sponsors
   protect_from_forgery
   
-  private
   
   def after_sign_in_path_for(resource)
       if resource.is_a?(Attendee) && current_attendee

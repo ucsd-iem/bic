@@ -49,17 +49,17 @@ group :development do
 end
 
 group :test, :development do
+  gem 'capybara'
   gem 'database_cleaner'
   gem 'faker'
   gem 'factory_girl_rails'
+  gem 'launchy'
   gem "rspec-rails", "~> 2.0"
 end
 
 group :test do
-  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
   gem 'guard-livereload'
   gem 'guard-rspec'
-  gem 'launchy'
   gem 'shoulda'
   gem 'sqlite3'
 end
