@@ -76,8 +76,8 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
   }
   
   .logos {
-    ul { margin:0; }
-    li { float:left; list-style-type: none; margin:10px 4px; width:126px; 
+    table { margin:0; }
+    td { list-style-type: none; margin:10px 4px; vertical-align: middle; width:126px; 
       img { margin:10px 0; }
       a { clear:both; display:block; }
       a.more { display:inline; }
