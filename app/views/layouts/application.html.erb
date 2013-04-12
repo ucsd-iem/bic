@@ -48,11 +48,11 @@
                   <% content_for :sponsors do %>
                     <h1>Sponsors</h1>
 
-                    <div class='logos clearfix'>
+                    <table class='logos'>
                       <%= render :partial => 'pages/side_sponsor', :collection => @dinner_sponsors %>                      
                       <%= render :partial => 'pages/side_sponsor', :collection => @foundational %>                      
                       <%= render :partial => 'pages/side_sponsor', :collection => @supporting %>                      
-                    </div>
+                    </table>
                   <% end %>
                   <%= render 'layouts/right' %>
               </div>

@@ -5,16 +5,28 @@
   
   <div class='dinner'>
     <h2 class='alert alert-success'>Dinner Sponsor</h2>
-    <ul class='clearfix'><%= render :partial => 'sponsor', :collection => @dinner_sponsors %></ul>
+    <table>
+      <tbody>
+        <%= render :partial => 'sponsor', :collection => @dinner_sponsors %>
+      </tbody>
+    </table>
   </div>
 
   <div class='foundational'>
     <h2 class='alert alert-success'>Foundational</h2>
-    <ul class='clearfix'><%= render :partial => 'sponsor', :collection => @foundational %></ul>
+    <table>
+      <tbody>
+        <%= render :partial => 'sponsor', :collection => @foundational %>
+      </tbody>
+    </table>
   </div>
 
   <div class='supporting'>
     <h2 class='alert alert-success'>Supporting</h2>
-    <ul class='clearfix'><%= render :partial => 'sponsor', :collection => @supporting %></ul>
+    <table>
+      <tbody>
+        <%= render :partial => 'sponsor', :collection => @supporting %>
+      </tbody>
+    </table>
   </div>
 </section>
