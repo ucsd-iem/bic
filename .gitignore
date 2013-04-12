@@ -15,6 +15,7 @@
 
 # Ignore test files
 /public/system/*
+/public/ckeditor_assets
 /coverage/
 /spec/tmp/*
 **.orig

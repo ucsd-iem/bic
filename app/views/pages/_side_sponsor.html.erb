@@ -1,0 +1,6 @@
+<%= raw("<tr>") if side_sponsor_counter.modulo(4) == 0 %>
+<td id="sponsor_<%= side_sponsor.id %>">
+  <%= link_to image_tag(side_sponsor.logo, :title => side_sponsor.name), sponsors_url %>
+</td>
+
+<%= raw("</tr> <!-- end row -->") if side_sponsor_counter.modulo(4) == 3 || side_sponsor == @dinner_sponsors.last || side_sponsor == @foundational.last || side_sponsor == @supporting.last %>

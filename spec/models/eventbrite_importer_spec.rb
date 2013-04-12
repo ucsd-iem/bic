@@ -1,7 +1,9 @@
 require 'spec_helper'
 
 describe EventbriteImporter do
-  # basic object instantiation
+
+  context 'basic object usage'
+  # object instantiation
   it { should be_an_instance_of(EventbriteImporter) }
 
   it 'should initialize the EventbriteImporter::EVENTBRITE_AUTH_TOKENS from the config file' do

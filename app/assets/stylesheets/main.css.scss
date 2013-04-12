@@ -36,19 +36,18 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
   a:hover {text-decoration: none;}
   p {font-size:0.9em;}
   .inner { padding:1em; }
-  
+  div.cke, #cke_sponsor_mission_statement { width:70%; }
   input[type="file"] { line-height:1em; }
 
-  .alert-error { background-color: rgba(28,83,171,0.77); color:white; padding:2px 4px; font-weight:300; -moz-border-radius: 2px;
-  border-radius: 2px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-      h4 { font-weight:100; }
-    }
-  
+  .alert-error { background-color: rgba(28,83,171,0.77); color:white; padding:2px 4px; font-weight:300; -moz-border-radius: 2px; border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    h4 { font-weight:100; }
+  }
+
   .navbar { margin:0.4em 0; }
-  
+
   header { margin:1em 0;
     
     h1 { line-height:1; margin:0 0 0.2em;
@@ -73,6 +72,15 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
   .well.done { background: #fff; border: 1px solid $border_color; margin:0; padding:0;
     .content {  
       section { padding:1em 0; }
+    }
+  }
+  
+  .logos {
+    table { margin:0; }
+    td { list-style-type: none; margin:10px 4px; vertical-align: middle; width:126px; 
+      img { margin:10px 0; }
+      a { clear:both; display:block; }
+      a.more { display:inline; }
     }
   }
 

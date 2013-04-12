@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>14th UC Systemwide Bioengineering Symposium <%= h(yield(:title) || nil)%></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <%= stylesheet_link_tag "application", :media => "all" %>
@@ -8,69 +8,58 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
+
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag 'modernizr' %>
     <script type="text/javascript">
-
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-19406073-2']);
       _gaq.push(['_trackPageview']);
-
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
     </script>
+
     <%= csrf_meta_tags %>
-</head>
-<body> 
-	<div class="container">
-	    <%= content_tag :div, content_tag(:button, 'x', :class => :close, "data-dismiss" => 'alert') + flash[:notice], :class =>'alert alert-info' if flash[:notice]%>
-	    <%= content_tag :div, content_tag(:button, 'x', :class => :close, "data-dismiss" => 'alert') + flash[:alert], :class =>'alert' if flash[:alert]%>
+  </head>
+  <body> 
+  	<div class="container">
+  	    <%= content_tag :div, content_tag(:button, 'x', :class => :close, "data-dismiss" => 'alert') + flash[:notice], :class =>'alert alert-info' if flash[:notice]%>
+  	    <%= content_tag :div, content_tag(:button, 'x', :class => :close, "data-dismiss" => 'alert') + flash[:alert], :class =>'alert' if flash[:alert]%>
         
         <%= render "layouts/nav" %>
-        
-        <%= render :partial => "layouts/header" %>
-
-
+        <%= render "layouts/header" %>
 
         <div class="row">
-          
           <div class='span8'>
             <div class="well done">
               <div class='inner'>
                 <section class='content'><%= yield %></section>                    
               </div>
             </div>
-            <%= render :partial => 'layouts/footer' %>
-            
-          </div>
-          
-          
+            <%= render 'layouts/footer' %>  
+          </div><!--  span8 -->
+        
           <div class='span4'>
             <div class="well done">
               <div class='inner'>
                   <% content_for :sponsors do %>
                     <h1>Sponsors</h1>
 
-                    <div class='logos'>
-                      <%= link_to image_tag("logos/bic.png", :title => "Bioengineering Institute of California"), 'https://bic.ucop.edu' %>
-                      <hr />
-                      <%= link_to image_tag("logos/life.png", :title => "Life Technologies"), 'http://www.lifetechnologies.com' %>
-                      <hr />
-                      <%= link_to image_tag("logos/research_affairs.png", :title => "Research Affairs"), 'http://research.ucsd.edu' %>
-                    </div>
+                    <table class='logos'>
+                      <%= render :partial => 'pages/side_sponsor', :collection => @dinner_sponsors %>                      
+                      <%= render :partial => 'pages/side_sponsor', :collection => @foundational %>                      
+                      <%= render :partial => 'pages/side_sponsor', :collection => @supporting %>                      
+                    </table>
                   <% end %>
-                  <%= render(:partial => 'layouts/right') %>
+                  <%= render 'layouts/right' %>
               </div>
             </div>
-          </div>
-          
-        </div>
-        
-    </div><!--  container -->
-</body>
+          </div><!-- span4 -->
+        </div><!--  row -->
+  
+      </div><!--  container -->
+  </body>
 </html>

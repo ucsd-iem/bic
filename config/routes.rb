@@ -1,4 +1,6 @@
 Ust::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :attendees, :path => '', :path_names => {:sign_in => '/abstracts/submit', :sign_out => 'logout'}

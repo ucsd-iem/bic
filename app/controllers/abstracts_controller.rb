@@ -1,9 +1,8 @@
 class AbstractsController < ApplicationController
 
   #Filter chain halted as :require_no_authentication rendered or redirected 
-  before_filter :authenticate_attendee!, :except => [:index, :keyword, :search, :submit, :verify]
-  before_filter :find_attendee, :only => [:new, :create, :edit, :update, :destroy]
-  before_filter :tag_cloud, :only => [:index, :keyword, :search]
+  before_filter :authenticate_attendee!, :except => [:index, :keyword, :search, :show, :submit, :verify]
+  before_filter :tag_cloud, :only => [:index, :keyword, :search, :show]
 
   # GET /abstracts
   # GET /abstracts.json
@@ -50,7 +49,7 @@ class AbstractsController < ApplicationController
     
     respond_to do |format|
       if @abstract.save
-        format.html { redirect_to abstracts_url, notice: 'Abstract was successfully created.' }
+        format.html { redirect_to @abstract, notice: 'Abstract was successfully created.' }
         format.json { render json: @abstract, status: :created, location: @abstract }
       else
         format.html { render action: "new" }
@@ -66,7 +65,7 @@ class AbstractsController < ApplicationController
 
     respond_to do |format|
       if @abstract.update_attributes(params[:abstract])
-        format.html { redirect_to abstracts_url, notice: 'Abstract was successfully updated.' }
+        format.html { redirect_to @abstract, notice: 'Abstract was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -95,39 +94,8 @@ class AbstractsController < ApplicationController
       format.json { render json: [@abstracts] }
     end
   end
-  
-  def search
-
-    respond_to do |format|
-      format.html { render action: :index}
-      format.json { render json: [@abstracts_2012, @abstracts_2010] }
-    end    
-  end
-
-  def submit
-    @attendee = Attendee.new(params[:attendee])
-  end
-  
-  def verify
-  	params[:order_id].include?('-') ? order_id = params[:order_id].split('-').last : order_id = params[:order_id]     
-    @attendee = Attendee.find_by_email(params[:email])
     
-    if @attendee
-      if @attendee.abstracts.first
-        redirect_to edit_abstract_url(@attendee.abstract), :notice => "Welcome back. Please update your abstract data using the form below."        
-      else
-        redirect_to new_abstract_url(:abstract => {:email => @attendee.email} ), :notice => "Great, we found your order. Please add your abstract data using the form below."
-      end
-    else      
-      redirect_to :back, :notice => "No order found with that id and email. Are you sure that you have registered using eventbrite?"
-    end
-  end
-  
   protected
-  
-  def find_attendee
-    redirect_to new_attendee_session_url, :notice => "You must provide an order ID and email associated with your Eventbrite registration to proceed." unless current_attendee
-  end
   
   def tag_cloud
     @keywords = Abstract.tag_counts_on(:keywords).shuffle[0..33] 

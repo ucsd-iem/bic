@@ -17,6 +17,6 @@ class Attendee < ActiveRecord::Base
   end
   
   def abstract
-    self.abstracts.first
+    self.abstracts.last
   end
 end

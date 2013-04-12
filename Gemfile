@@ -1,19 +1,20 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 
 gem 'mysql2'
 gem 'acts_as_indexed'
 gem 'acts-as-taggable-on'
 gem 'carmen'
+gem 'ckeditor'
 gem 'client_side_validations'
 gem 'cocaine', :git => 'git://github.com/thoughtbot/cocaine.git' 
 gem 'capistrano'
 gem 'devise'
 gem 'eventbrite-client'
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.1.0'
+gem 'jquery-ui-rails'
 gem 'kaminari'
-gem 'modernizr-rails'
 gem 'mysql2'
 gem 'paperclip'
 gem 'paper_trail'
@@ -26,6 +27,7 @@ group :assets do
   gem 'bootstrap-sass', '~> 2.1.1.0'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'libv8', '~> 3.11.8'
+  gem 'modernizr-rails'
   gem 'therubyracer'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'
@@ -37,6 +39,9 @@ group :development do
   gem 'debugger'
   gem 'map_by_method'
   gem 'meta_request'
+  gem 'rb-fchange', :require => false
+  gem 'rb-fsevent', :require => false
+  gem 'rb-inotify', :require => false
   gem 'ruby_gntp'
   gem 'simplecov'
   gem 'what_methods'
@@ -44,20 +49,17 @@ group :development do
 end
 
 group :test, :development do
+  gem 'capybara'
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
   gem 'faker'
+  gem 'factory_girl_rails'
+  gem 'launchy'
   gem "rspec-rails", "~> 2.0"
-  gem 'rb-fchange', :require => false
-  gem 'rb-fsevent', :require => false
-  gem 'rb-inotify', :require => false
 end
 
 group :test do
-  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
   gem 'guard-livereload'
   gem 'guard-rspec'
-  gem 'launchy'
   gem 'shoulda'
   gem 'sqlite3'
 end

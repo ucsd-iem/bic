@@ -1,8 +1,8 @@
 Dear <%= @abstract.attendee.first_name %>,
 
-Your abstract has been updated. Please review the information below:
+You or a site admin has updated your abstract.  Please review the information below:
 
-<% %w{name email order_id}.each do |w| -%><%= "#{w.capitalize}: #{@abstract.attendee.send(w)}
+<% %w{name email}.each do |w| -%><%= "#{w.capitalize}: #{@abstract.attendee.send(w)}
 " if @abstract.attendee.send(w) && @abstract.attendee.send(w) != '' %><% end %>
 <% %w{title authors affiliations body}.each do |w| -%><%= "#{w.capitalize}: #{@abstract.send(w)}
 " if @abstract.send(w) && @abstract.send(w) != '' %><% end %>
