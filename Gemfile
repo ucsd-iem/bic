@@ -50,10 +50,12 @@ end
 
 group :test, :development do
   gem 'capybara'
+  gem "capybara-webkit"
   gem 'database_cleaner'
   gem 'faker'
   gem 'factory_girl_rails'
   gem 'launchy'
+  gem 'poltergeist'
   gem "rspec-rails", "~> 2.0"
 end
 
