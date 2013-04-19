@@ -5,8 +5,8 @@ describe Event do
   it { should be_an_instance_of(Event) }
 
   # association(s)
-  it { should respond_to :abstracts }
-  it { should have_many :abstracts }
+#  it { should respond_to :abstracts }
+#  it { should have_many :abstracts }
   
   it 'should return a custom name made up of the id, title, and startime' do
     event = FactoryGirl.create(:event)

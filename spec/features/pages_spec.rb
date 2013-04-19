@@ -56,7 +56,7 @@ describe "Pages" do
     it "should display the email and phone number for the event contacts" do
       visit contact_url
       page.status_code.should be(200)
-      page.should have_content('iem@ucsd.edu')
+      page.should have_content('bic@ucop.edu')
       page.should have_content('858.534.6265')
     end
   end

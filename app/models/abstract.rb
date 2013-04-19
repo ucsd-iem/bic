@@ -4,8 +4,8 @@ class Abstract < ActiveRecord::Base
   belongs_to :attendee, :class_name => "Attendee", :foreign_key => "attendee_id"
 #  belongs_to :event, :class_name => "Event", :foreign_key => "event_id"
   accepts_nested_attributes_for :attendee
-  belongs_to :event, :inverse_of => :abstracts
-  accepts_nested_attributes_for :event
+#  belongs_to :event, :inverse_of => :abstracts
+#  accepts_nested_attributes_for :event
   
   after_create :deliver_confirmation
   after_save :deliver_update

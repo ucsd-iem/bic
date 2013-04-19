@@ -30,7 +30,7 @@ class EventbriteImporter
 
       result = Attendee.find_by_email(attendee['email'])
       unless result
-        attributes_hash['password'] = attendee['order_id']
+        attributes_hash['password'] = "5146078058-#{attendee['order_id']}"
         result = Attendee.create(attributes_hash)
       end
       

@@ -1,32 +1,40 @@
 <section id='sponsors' class='page'>
   <h1>Sponsors</h1>
 
-  <p>We would like to thank our sponsors for their generous support in making this event possible.  Below, we recognize each sponsor individually by their logo and a brief statement about their organization</p>
+  <p>We would like to thank our sponsors for their generous support in making this event possible. Below, we recognize each sponsor individually by their logo and a brief statement about their organization</p>
   
-  <div class='dinner'>
-    <h2 class='alert alert-success'>Dinner Sponsor</h2>
-    <table>
-      <tbody>
-        <%= render :partial => 'sponsor', :collection => @dinner_sponsors %>
-      </tbody>
-    </table>
-  </div>
+  <%- unless @dinner_sponsors.empty? -%>
+    <div class='dinner'>
+      <h2 class='alert alert-success'>Dinner Sponsor</h2>
+      <table>
+        <tbody>
+          <%= render :partial => 'sponsor', :collection => @dinner_sponsors %>
+        </tbody>
+      </table>
+    </div>
+  <%- end -%>
 
-  <div class='foundational'>
-    <h2 class='alert alert-success'>Foundational</h2>
-    <table>
-      <tbody>
-        <%= render :partial => 'sponsor', :collection => @foundational %>
-      </tbody>
-    </table>
-  </div>
+  <%- unless @foundational.empty? -%>
+    <div class='foundational'>
+      <h2 class='alert alert-success'>Foundational</h2>
+      <table>
+        <tbody>
+          <%= render :partial => 'sponsor', :collection => @foundational %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
 
-  <div class='supporting'>
-    <h2 class='alert alert-success'>Supporting</h2>
-    <table>
-      <tbody>
-        <%= render :partial => 'sponsor', :collection => @supporting %>
-      </tbody>
-    </table>
-  </div>
+  <%- unless @supporting.empty? -%>
+    <div class='supporting'>
+      <h2 class='alert alert-success'>Supporting</h2>
+      <table>
+        <tbody>
+          <%= render :partial => 'sponsor', :collection => @supporting %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+  
+  <p>Please <%= link_to "contact us", contact_url %> if you're interested in becoming a sponsor.</p>
 </section>
