@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/lib/tasks
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/lib/tasks/.gitkeep
+END
+svn.rake
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/lib/tasks/svn.rake
+END

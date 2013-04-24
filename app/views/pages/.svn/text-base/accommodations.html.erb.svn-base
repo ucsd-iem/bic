@@ -1,0 +1,55 @@
+<h1>Accomodations</h1>
+
+<h2>Warren Dormitory</h2>
+<p>Students and Post Docs have the option of staying in Goldberg Hall at the Warren College Dorms for <span class='alert-success'>$144.76</span> for two nights. You must book using our <%= link_to "online registration form", register_url, :class => 'alert-info' %></span>. A third night is possible, but attendees will have to pay with cash upon checking in at Earl's Place.  <span class='alert-info'>Capacity is limited.</span></p>
+
+<%= image_tag('warren_dorms.jpg') %>
+
+<h2>Hotels</h2>
+<p>There are a number of excellent hotels in the area. Take a look at our <%= link_to "event map", 'https://maps.google.com/maps/ms?msa=0&msid=217723166706845739193.0004cba4e7b1c1cef1ada&ie=UTF8&t=m&ll=32.882524,-117.234721&spn=0.011136,0.013239&z=16&source=embed' %> for location details.</p>
+
+<ul id='hotel_list' class='clearfix'>
+  <li class='clearfix'>
+      <%= link_to image_tag('estancia.png'), 'http://www.estancialajolla.com/' %>
+      <p>
+          <em>Estancia La Jolla</em><br />
+          <%= link_to "9700 N. Torrey Pines Road., La Jolla, CA 92037", 'https://maps.google.com/maps?saddr=9700+N.+Torrey+Pines+Rd.,+La+Jolla,+CA+92037&daddr=UCSD' %><br />
+          858.964.6527 | 
+          <%= link_to "http://estancialajolla.com/", 'http://estancialajolla.com/' %><br />
+          <span class='alert-success'>from $179/night</span>
+      </p>
+  </li>
+  <li class='clearfix'>
+      <%= link_to image_tag('la_jolla_shores.png'), 'http://ljshoreshotel.com/' %>
+      <p>
+          <em>La Jolla Shores Hotel</em><br />
+          <%= link_to "8110 Camino Del Oro, La Jolla, CA 92037", 'https://maps.google.com/maps?saddr=8110+Camino+Del+Oro,+La+Jolla,+CA+92037&daddr=UCSD' %><br />
+          800.476.0604 | 
+          <%= link_to "http://ljshoreshotel.com.com/", 'http://ljshoreshotel.com.com/' %><br />
+          <span class='alert-success'>from $139/night</span>
+          <span class='alert-success'>parking $16/day</span>
+          
+      </p>
+  </li>
+  <li class='clearfix'>
+      <%= link_to image_tag('sheraton.png', :id => :sheraton), 'http://sheratonlajolla.com/' %>
+      <p>
+          <em>Sheraton La Jolla Hotel</em><br />
+          <%= link_to "3299 Holiday Court La Jolla, CA 92037", 'https://maps.google.com/maps?saddr=9700+N.+Torrey+Pines+Rd.,+La+Jolla,+CA+92037&daddr=UCSD' %><br />
+          858.453.5500 | 
+          <%= link_to "http://estancialajolla.com/", 'http://estancialajolla.com/' %><br />
+            <span class='alert-success'>$159 from a night</span>
+      </p>
+  </li>
+  <li class='clearfix'>
+      <%= link_to image_tag('Marriott.png'), 'http://www.marriott.com/hotels/travel/sanlj-san-diego-marriott-la-jolla/' %>
+      <p>
+          <em>Marriot</em><br />
+          <%= link_to "4240 La Jolla Village Drive, La Jolla, CA 92037", 'http://maps.google.com/maps?saddr=4240+La+Jolla+Village+Drive%2C+La+Jolla%2C+CA+92037&daddr=UCSD' %> <br />
+          888.236.2427 | 
+          <%= link_to "http://marriott.com/janlj", 'http://marriott.com/janlj' %><br />
+          <span class='alert-success'>$194 from a night</span>
+          <span class='alert-success'>parking $20/day, $4/hour</span>
+      </p>
+  </li>
+</ul>

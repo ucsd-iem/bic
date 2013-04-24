@@ -1,0 +1,12 @@
+<h1><%= @abstract.title %></h1>
+
+<h4>
+  <%= @abstract.authors %><br />
+  <%= @abstract.affiliations %>
+</h4>
+
+<%= content_tag :p, raw("<b>Keywords</b> #{@abstract.keyword_list}") unless @abstract.keyword_list.empty? %>
+
+<p>
+  <%= @abstract.body %>
+</p>

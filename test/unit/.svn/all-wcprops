@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/bic_symposia/!svn/ver/40/branches/bic2013/test/unit
+END
+user_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/user_test.rb
+END
+event_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/event_test.rb
+END
+registrant_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/registrant_test.rb
+END
+abstract_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/abstract_test.rb
+END
+sponsor_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/sponsor_test.rb
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/.gitkeep
+END
+attendee_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/bic_symposia/!svn/ver/40/branches/bic2013/test/unit/attendee_test.rb
+END
+announcement_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/announcement_test.rb
+END
+moderator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/moderator_test.rb
+END

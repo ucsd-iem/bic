@@ -1,0 +1,4 @@
+<%- @announcements.each do |announcement| -%>
+  <h4 class='alert-info'><%= announcement.title %></h4>
+  <p><%= announcement.body %></p>
+<%- end -%>  

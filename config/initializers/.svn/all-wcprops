@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/bic_symposia/!svn/ver/39/branches/bic2013/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/config/initializers/inflections.rb
+END
+client_side_validations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/config/initializers/client_side_validations.rb
+END
+devise.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/bic_symposia/!svn/ver/39/branches/bic2013/config/initializers/devise.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/bic_symposia/!svn/ver/31/branches/bic2013/config/initializers/session_store.rb
+END
+kaminari_config.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/config/initializers/kaminari_config.rb
+END
+rails_admin.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/config/initializers/rails_admin.rb
+END
+eventbrite-client.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/bic_symposia/!svn/ver/38/branches/bic2013/config/initializers/eventbrite-client.rb
+END
+secret_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/config/initializers/secret_token.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/config/initializers/backtrace_silencers.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/config/initializers/mime_types.rb
+END
+wrap_parameters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/config/initializers/wrap_parameters.rb
+END

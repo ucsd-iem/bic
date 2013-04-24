@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/bic_symposia/!svn/ver/47/branches/bic2013/app/views/notification
+END
+abstract_update.text.erb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/bic_symposia/!svn/ver/47/branches/bic2013/app/views/notification/abstract_update.text.erb
+END
+abstract_confirmation.text.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/bic_symposia/!svn/ver/47/branches/bic2013/app/views/notification/abstract_confirmation.text.erb
+END

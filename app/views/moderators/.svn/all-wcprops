@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/views/moderators
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/views/moderators/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/views/moderators/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/views/moderators/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/views/moderators/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/views/moderators/_form.html.erb
+END

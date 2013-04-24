@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/views/kaminari
+END
+_prev_page.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/views/kaminari/_prev_page.html.erb
+END
+_next_page.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/views/kaminari/_next_page.html.erb
+END
+_paginator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/views/kaminari/_paginator.html.erb
+END

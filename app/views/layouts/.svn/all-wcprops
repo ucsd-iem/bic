@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/bic_symposia/!svn/ver/111/branches/bic2013/app/views/layouts
+END
+sponsors.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/bic_symposia/!svn/ver/96/branches/bic2013/app/views/layouts/sponsors.html.erb
+END
+_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/bic_symposia/!svn/ver/99/branches/bic2013/app/views/layouts/_header.html.erb
+END
+_left.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/views/layouts/_left.html.erb
+END
+_right.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/bic_symposia/!svn/ver/103/branches/bic2013/app/views/layouts/_right.html.erb
+END
+_explore.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/views/layouts/_explore.html.erb
+END
+_footer.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/bic_symposia/!svn/ver/51/branches/bic2013/app/views/layouts/_footer.html.erb
+END
+_nav.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/bic_symposia/!svn/ver/111/branches/bic2013/app/views/layouts/_nav.html.erb
+END
+application.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/bic_symposia/!svn/ver/96/branches/bic2013/app/views/layouts/application.html.erb
+END
+events.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/bic_symposia/!svn/ver/96/branches/bic2013/app/views/layouts/events.html.erb
+END

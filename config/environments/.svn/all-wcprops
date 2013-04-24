@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/bic_symposia/!svn/ver/92/branches/bic2013/config/environments
+END
+test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/config/environments/test.rb
+END
+development.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/bic_symposia/!svn/ver/92/branches/bic2013/config/environments/development.rb
+END
+production.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/bic_symposia/!svn/ver/34/branches/bic2013/config/environments/production.rb
+END

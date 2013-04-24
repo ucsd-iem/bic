@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/helpers
+END
+moderators_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/helpers/moderators_helper_test.rb
+END
+pages_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/helpers/pages_helper_test.rb
+END
+events_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/helpers/events_helper_test.rb
+END
+registrants_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/helpers/registrants_helper_test.rb
+END
+abstracts_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/test/unit/helpers/abstracts_helper_test.rb
+END

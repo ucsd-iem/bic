@@ -1,0 +1,5 @@
+<section class='page'>
+  <h1>FAQ</h1>
+  
+  <p>If you have any questions, please contact us at <%= mail_to 'iem@ucsd.edu' %> or by phone at 858.534.6265.</p>
+</section>

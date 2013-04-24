@@ -1,0 +1,29 @@
+<h1>Listing moderators</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Middle name</th>
+    <th>Last name</th>
+    <th>Affiliaiton</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @moderators.each do |moderator| %>
+  <tr>
+    <td><%= moderator.first_name %></td>
+    <td><%= moderator.middle_name %></td>
+    <td><%= moderator.last_name %></td>
+    <td><%= moderator.affiliaiton %></td>
+    <td><%= link_to 'Show', moderator %></td>
+    <td><%= link_to 'Edit', edit_moderator_path(moderator) %></td>
+    <td><%= link_to 'Destroy', moderator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Moderator', new_moderator_path %>

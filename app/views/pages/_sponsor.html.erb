@@ -1,8 +1,0 @@
-<%= raw("<tr>") if sponsor_counter.modulo(4) == 0 %>
-<td id="sponsor_<%= sponsor.id %>">
-  <%= link_to image_tag(sponsor.logo, :title => sponsor.name), sponsor.url %>
-  <p>
-    <%= tagline_truncated_mission_statement(sponsor) %>&nbsp;<%= link_to content_tag(:span, 'more', :class => 'alert-info'), sponsor.url, 'data-toggle' => :popover, 'data-placement' => :top, 'data-content' => '.', :title => nil, 'data-original-title' => sponsor.mission_statement, :class => :more %>
-  </p>
-</td>
-<%= raw("</tr> <!-- end row -->") if sponsor_counter.modulo(4) == 3 || sponsor == @dinner_sponsors.last || sponsor == @foundational.last || sponsor == @supporting.last %>

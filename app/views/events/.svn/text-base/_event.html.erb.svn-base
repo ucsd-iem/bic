@@ -1,0 +1,6 @@
+    <tr>
+    	<td class='time'><%= event.start.strftime("%l:%M") %> - <%= event.stop.strftime("%l:%M %p") %></td>
+    	<td class='event'>
+    	    <%= raw event.title %>
+    	</td>
+    </tr>

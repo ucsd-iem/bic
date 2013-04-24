@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/bic_symposia/!svn/ver/105/branches/bic2013/db/migrate
+END
+20121101201212_add_position_to_abstract.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121101201212_add_position_to_abstract.rb
+END
+20130321014333_create_tickets.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/bic_symposia/!svn/ver/105/branches/bic2013/db/migrate/20130321014333_create_tickets.rb
+END
+20121005193013_create_registrants.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121005193013_create_registrants.rb
+END
+20121102065514_create_events.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121102065514_create_events.rb
+END
+20121004232109_create_versions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121004232109_create_versions.rb
+END
+20130127072219_add_location_to_event.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/bic_symposia/!svn/ver/64/branches/bic2013/db/migrate/20130127072219_add_location_to_event.rb
+END
+20121212181305_create_announcements.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121212181305_create_announcements.rb
+END
+20121102071208_create_moderators.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121102071208_create_moderators.rb
+END
+20121102215736_add_presenter_data_to_abstract.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121102215736_add_presenter_data_to_abstract.rb
+END
+20121102071314_add_attachment_biosketch_photo_to_moderators.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121102071314_add_attachment_biosketch_photo_to_moderators.rb
+END
+20121004232532_add_attachment_biosketch_to_abstracts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121004232532_add_attachment_biosketch_to_abstracts.rb
+END
+20130105003936_create_attendees.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/bic_symposia/!svn/ver/40/branches/bic2013/db/migrate/20130105003936_create_attendees.rb
+END
+20121004231524_create_rails_admin_histories_table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121004231524_create_rails_admin_histories_table.rb
+END
+20121004232505_create_abstracts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/bic_symposia/!svn/ver/51/branches/bic2013/db/migrate/20121004232505_create_abstracts.rb
+END
+20121004233644_acts_as_taggable_on_migration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121004233644_acts_as_taggable_on_migration.rb
+END
+20121002024154_devise_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121002024154_devise_create_users.rb
+END
+20121216064334_create_sponsors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121216064334_create_sponsors.rb
+END
+20121012230151_add_attachment_cv_poster_presentation_to_abstracts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/db/migrate/20121012230151_add_attachment_cv_poster_presentation_to_abstracts.rb
+END

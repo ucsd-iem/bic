@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/bic_symposia/!svn/ver/104/branches/bic2013/app/controllers
+END
+moderators_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/controllers/moderators_controller.rb
+END
+pages_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/bic_symposia/!svn/ver/87/branches/bic2013/app/controllers/pages_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/controllers/application_controller.rb
+END
+events_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/bic_symposia/!svn/ver/35/branches/bic2013/app/controllers/events_controller.rb
+END
+registrants_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/bic_symposia/!svn/ver/27/branches/bic2013/app/controllers/registrants_controller.rb
+END
+abstracts_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/bic_symposia/!svn/ver/104/branches/bic2013/app/controllers/abstracts_controller.rb
+END

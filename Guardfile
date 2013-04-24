@@ -10,9 +10,8 @@ guard 'livereload' do
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html))).*}) { |m| "/assets/#{m[3]}" }
 end
 
-guard 'rspec', :cli => "--color --format nested --fail-fast --drb" do
+guard 'rspec' do :cli => "--color --format nested --fail-fast --drb"
   watch(%r{^spec/.+_spec\.rb$})
-  watch(%r{^spec/**/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
 

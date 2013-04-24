@@ -1,6 +1,0 @@
-<%= form_for(@attendee, :as => :attendee, :html => {:class => "form-inline"}, :url => session_path(@attendee)) do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.email_field :email, :placeholder => 'Email'  %>
-  <%= f.password_field :password, :placeholder => 'Order ID (e.g. 132147645)' %>
-  <%= f.submit "Submit Abstract", :class => "btn" %>
-<% end %>

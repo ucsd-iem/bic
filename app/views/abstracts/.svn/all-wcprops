@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/bic_symposia/!svn/ver/104/branches/bic2013/app/views/abstracts
+END
+_submit_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/bic_symposia/!svn/ver/45/branches/bic2013/app/views/abstracts/_submit_form.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/bic_symposia/!svn/ver/49/branches/bic2013/app/views/abstracts/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/bic_symposia/!svn/ver/104/branches/bic2013/app/views/abstracts/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/bic_symposia/!svn/ver/49/branches/bic2013/app/views/abstracts/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/bic_symposia/!svn/ver/49/branches/bic2013/app/views/abstracts/show.html.erb
+END
+_abstract.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/bic_symposia/!svn/ver/104/branches/bic2013/app/views/abstracts/_abstract.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/bic_symposia/!svn/ver/51/branches/bic2013/app/views/abstracts/_form.html.erb
+END
+submit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/bic_symposia/!svn/ver/103/branches/bic2013/app/views/abstracts/submit.html.erb
+END

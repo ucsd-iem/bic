@@ -1,0 +1,412 @@
+<section class='page' id="program">
+	
+	<h1>Program</h1>
+	<p>
+	  Sponsored by Institute of Engineering in Medicine (IEM), University of California, San Diego (UCSD); National Yang Ming University (NYMU) and National Chiao Tung University (NCTU) of the United System of Taiwan (UST); and the International Research-intensive Center of Excellence (I-RiCE) of Taiwan National Science Council.
+	</p>
+  	
+  <nav>
+    <ul class='nav nav-tabs'>
+      <li <%= "class=active" if Date.today < Date.new(2012,11,19) %>><%= link_to 'Monday, November 19, 2012','#mon', "data-toggle" => 'tab' %></li>
+      <li <%= "class=active" if Date.today > Date.new(2012,11,19) %>><%= link_to 'Tuesday, November 20, 2012','#tue', "data-toggle" => 'tab' %></li>
+    </ul>
+  </nav>
+  
+  <div class="tab-content">
+  	<div id="mon" class='tab-pane <%= "active" if Date.today < Date.new(2012,11,19) %>'>
+  		<table class='table table-striped table-condensed'>
+  			<tr>
+  				<td class='date'>8:00 - 8:30</td>
+  				<td class='session'>&nbsp;</td>
+  				<td class='event'>Registration and Continental Breakfast</td>
+  			</tr>
+
+			  <tr><th colspan='4'>Session I: Mechanotransduction, Molecular Dynamics, and Nanotechnology</th></tr>
+  			<tr>
+  			  <td class='moderators' colspan='2'>Moderators:</td>
+  			  <td colspan='2'>
+  			    <b>Shu Chien</b>, Depts. Bioengineering &amp; Medicine and IEM, UCSD<br />
+  			    <b>Arthur Chiou</b>, Institute of Biophotonics and Biophotonics &amp; Molecular Imaging Research Center, NYMU
+  			  </td>
+  			</tr>
+
+  			<tr>
+  				<td class='date'>8:30 - 9:00</td>
+  				<td class='session'>I-1</td>
+  				<td class='event'>
+  				  <b>Jean-Cheng Kuo</b>, Inst. of Biochemistry and Molecular Biology, NYMU<br />
+  				  <i>Mechanotransduction at Focal Adhesion: Integrating Cytoskeletal Mechanics in Migrating Cells</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>9:00 - 9:30</td>
+  				<td class='session'>I-2</td>
+  				<td class='event'>
+  					<b>Adam Engler</b>, Dept. of Bioengineering and IEM, UCSD<br />
+  					<i>In Situ Mechanotransduction via Vinculin Regulates Stem Cell Myogenesis</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>9:30 - 10:00</td>
+  				<td class='session'>I-3</td>
+  				<td class='event'>
+  					<b>Hsiu-Fang Fan</b>, Dept. of Life Sciences and  Inst. of Genome Sciences, NYMU<br />
+  					<i>Single Molecule Approaches to Study Chromatin</i>
+  				</td>
+  			</tr>
+
+  			<tr>
+  				<td class='date'>10:00 - 10:30</td>
+  				<td class='session'></td>
+  				<td class='event'>
+  					<b>Intermission</b>
+  				</td>
+  			</tr>
+
+  			<tr>
+  				<td class='date'>10:30 - 11:00</td>
+  				<td class='session'>I-4</td>
+  				<td class='event'>
+  				  <b>Ratneshwar Lal</b>, Depts. of Mechanical &amp; Aerospace Engineering and Bioengineering, and IEM, UCSD<br />
+  				  <i>3D Molecular Structure of Native Biological Macromolecular Complexes Using AFM</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>11:00 - 11:30</td>
+  				<td class='session'>I-5</td>
+  				<td class='event'>
+  					<b>Chau-Hwang Lee</b>, Inst. of Biophotonics, NYMU<br />
+  					<i>Cancer cell responses to the stimulations from microenvironment in microfluidic devices</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>11:30 - 12:00</td>
+  				<td class='session'>I-6</td>
+  				<td class='event'>
+  					<b>Liangfang Zhang</b>, Dept. of NanoEngineering, UCSD<br />
+  					<i>RBC Membrane-Camouflaged Nanoparticles as a Biomimetic Delivery Platform</i>
+  				</td>
+  			</tr>
+
+  			<tr>
+  				<td class='date'>12:00 - 12:50</td>
+  				<td class='session'></td>
+  				<td class='event'>
+  					<b>Lunch</b>
+  				</td>
+  			</tr>				
+  
+  			<tr><th colspan='3'>Session II: Brain and Neuroscience</th></tr>
+  			<tr>
+  			  <td class='moderators' colspan='2'>Moderators:</td>
+  			  <td colspan='2'>
+  			    <b>William Mobley</b>, Dept. Neurosciences and IEM, UCSD<br />
+  			    <b>Shuu-Jiun Wang</b>, Dept. Neurology, NYMU
+  			  </td>
+  			</tr>
+
+  			<tr>
+  				<td class='date'>12:50 - 1:20</td>
+  				<td class='session'>II-1</td>
+  				<td class='event'>
+  				  <b>Jin-Wu Tsai</b>, Inst. of Brain Science, NYMU<br />
+  				  <i>Using in vivo 2-photon Microscopy to Study Neural Development and Degeneration</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>1:20 - 1:50</td>
+  				<td class='session'>II-2</td>
+  				<td class='event'>
+  					<b>Yishi Jin</b>, Dept. of Cellular &amp; Molecular Medicine, UCSD<br />
+  					<i>Using C. elegans to discover novel molecular pathways in axon regeneration</i>
+  				</td>
+  			</tr>
+  			
+  			<tr>
+  				<td class='date'>1:50 - 2:10</td>
+  				<td class='session'></td>
+  				<td class='event'>
+  					<b>Opening Ceremony</b><br />
+  					Pradeep Khosla, Chancellor, UCSD<br />
+            Kung-Yee Liang, President, NYMU            
+  				</td>
+  			</tr>
+  			
+  			<tr>
+  				<td class='date'>2:10 - 2:40</td>
+  				<td class='session'>II-3</td>
+  				<td class='event'>
+  					<b>Ming-Chang Chiang</b>, Inst. of Biomedical Engineering, NYMU<br />
+  					<i>Using Functional MRI to Study Motor Learning in Patients with Neurological Disorders</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>2:40 - 3:10</td>
+  				<td class='session'>II-4</td>
+  				<td class='event'>
+  					<b>Larry Frank</b>, Center for Scientific Computation in Imaging and IEM, UCSD<br />
+  					<i>Applications and Challenges of Diffusion Tensor Imaging</i>
+  				</td>
+  			</tr>
+
+  			<tr>
+  				<td class='date'>3:10 - 3:40</td>
+  				<td class='session'></td>
+  				<td class='event'>
+  					<b>Intermission</b>
+  				</td>
+  			</tr>
+  			
+  			<tr>
+  				<td class='date'>3:40 - 4:10</td>
+  				<td class='session'>II-5</td>
+  				<td class='event'>
+  				  <b>Tzu-Hao Cheng</b>, Inst. of Biochemistry &amp; Molecular Biology, NYMU<br />
+  				  <i>Spt4 is Selectively Required for Transcription of Extended Trinucleotide Repeats</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>4:10 - 4:40</td>
+  				<td class='session'>II-6</td>
+  				<td class='event'>
+  					<b>Don W. Cleveland</b>, Dept. Cellular &amp; Molecular Medicine, UCSD<br />
+  					<i>Engineering Therapies for Neurodegenerative Disease: ALS, Huntington’s and Beyond</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>4:40 - 5:10</td>
+  				<td class='session'>II-7</td>
+  				<td class='event'>
+  					<b>Shuu-Jiun Wang</b>, Dept. of Medicine and Neurological  Inst., Taipei VGH<br />
+  					<i>Migraine and Electrophysiology</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>5:10 - 5:40</td>
+  				<td class='session'>II-8</td>
+  				<td class='event'>
+  					<b>Tzyy-Ping Jung</b>, Inst. Neural Computation (INC), IEM, and Dept. Bioengineering, UCSD; and Dept. Computer Science, NCTU<br />
+  					<i>Recent Advances in Neurotechnologies and Computational Methods for Translational Neuroscience</i>
+  				</td>
+  			</tr>
+
+
+      </table>
+    </div>
+
+  	<div id="tue" class='tab-pane <%= "active" if Date.today > Date.new(2012,11,19) %>'>
+  		<table class='table table-striped table-condensed'>
+  			<tr>
+  				<td class='date'>7:30 - 8:00</td>
+  				<td class='session'>&nbsp;</td>
+  				<td class='event'>Continental Breakfast</td>
+  			</tr>
+
+  			<tr><th colspan='3'>Session III: Neuroscience and Telemedicine</th></tr>
+  			<tr>
+  			  <td class='moderators' colspan='2'>Moderators:</td>
+  			  <td colspan='2'>
+  			    <b>Ya-Wei Cheng</b>, Inst. Neuroscience, NYMU<br />
+  			    <b>Tzzy-Ping Jung</b>, Inst. Neural Computation (INC), IEM, and Dept. Bioengineering, UCSD; and Dept. Computer Science, NCTU
+  			  </td>
+  			</tr>
+  			
+  			<tr>
+  				<td class='date'>8:00 - 8:30</td>
+  				<td class='session'>III-1</td>
+  				<td class='event'>
+  				  <b>Ya-Wei Cheng</b>, Inst. of Neuroscience, NYMU<br />
+  				  <i>Voice and Emotion Processing in the Human Neonatal Brain</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>8:30 - 9:00</td>
+  				<td class='session'>III-2</td>
+  				<td class='event'>
+  					<b>Ming T. Tsuang</b>, Dept. of Psychiatry and IEM, UCSD<br />
+  					<i>Maternal intra-uterine infection and subsequent psychosis among adult offspring </i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>9:00 - 9:30</td>
+  				<td class='session'>III-3</td>
+  				<td class='event'>
+  					<b>Li-Wei Ko</b>, Dept. Biological Science &amp; Technology, NCTU<br />
+  					<i>ECG-based Home-based Cardio-Pulmonary Rehabilitation Consultant System</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>9:30 - 10:00</td>
+  				<td class='session'>III-4</td>
+  				<td class='event'>
+  				  <b>Kevin Patrick</b>, Dept. of Family &amp; Preventive Medicine and IEM, UCSD<br />
+  				  <i>Mobile Sensing for Individual and Population-Level Health Assessment and Improvement</i>
+  				</td>
+  			</tr>
+  			
+  			<tr>
+  				<td class='date'>10:00 - 10:20</td>
+  				<td class='session'></td>
+  				<td class='event'>
+  					<b>Intermission</b>
+  				</td>
+  			</tr>				
+  			
+  			<tr><th colspan='3'>Session IV: Stem Cells and Regenerative Medicine</th></tr>
+  			<tr>
+  			  <td class='moderators' colspan='2'>Moderators:</td>
+  			  <td colspan='2'>
+  			    <b>Yueh-Hsin Ping</b>, Inst. Pharmacology, NYMU<br />
+  			    <b>Karl Willert</b>, Dept. Neurology, NYMU
+  			  </td>
+  			</tr>
+  			
+  			<tr>
+  				<td class='date'>10:20 - 10:50</td>
+  				<td class='session'>IV-1</td>
+  				<td class='event'>
+  				  <b>Wan-Chun Li</b>, Dept. of Dentistry, NYMU<br />
+  				  <i>Stem/Progenitor Cell Based Regeneration for Pancreatic Islets and Periodontal Tissues</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>10:50 - 11:20</td>
+  				<td class='session'>IV-2</td>
+  				<td class='event'>
+  					<b>Karl Willert</b>, Dept. Cellular and Molecular Medicine and IEM, UCSD<br />
+  					<i>Regulation of Endodermal Differentiation of Human Embryonic Stem Cells through Integrin-ECM Interactions</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>11:20 - 11:50</td>
+  				<td class='session'>IV-3</td>
+  				<td class='event'>
+  					<b>Shih-Chieh Hung</b>, Inst. of Clinical Medicine, NYMU<br />
+  					<i>Effects of Hypoxic Culture on Mesenchymal Stem Cells - From Bench to Bedside</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>11:50 - 12:20</td>
+  				<td class='session'>IV-4</td>
+  				<td class='event'>
+  					<b>Kung Zhang</b>, Dept. of Bioengineering and IEM, UCSD<br />
+  					<i>A hiPSC Unique Epigenetic Signature Identified by Targeted Methylation sequencing</i>
+  				</td>
+  			</tr>
+
+  			<tr>
+  				<td class='date'>12:20 - 1:10</td>
+  				<td class='session'></td>
+  				<td class='event'>
+  					<b>Lunch</b>
+  				</td>
+  			</tr>
+
+  			<tr><th colspan='3'>Session V: Genomics and Systems Biology</th></tr>
+  			<tr>
+  			  <td class='moderators' colspan='2'>Moderators:</td>
+  			  <td colspan='2'>
+  			    <b>Hsien-Da Huang</b>, Inst. Bioinformatics & Systems Biology, NCTU<br />
+  			    <b>Shankar Subramaniam</b>, Dept. Bioengineering and IEM, UCSD
+  			  </td>
+  			</tr>
+  			
+  			<tr>
+  				<td class='date'>1:10 - 1:40</td>
+  				<td class='session'>V-1</td>
+  				<td class='event'>
+  				  <b>Guan-Hua Huang</b>, Inst. of Statistics, NCTU<br />
+  				  <i>Detecting Gene-Gene Interactions in High-Throughput Genotype Data Through a Bayesian Clustering Procedure</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>1:40 - 2:10</td>
+  				<td class='session'>V-2</td>
+  				<td class='event'>
+  					<b>Sonia Jain</b>, Division of Biostatistics, UCSD<br />
+  					<i>Analysis of Gene Expression Data via Bayesian Mixture Models</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>2:10 - 2:40</td>
+  				<td class='session'>V-3</td>
+  				<td class='event'>
+  					<b>Hsien-Da Huang</b>, Inst. of Bioinformatics and Systems Biology, NCTU<br />
+  					<i>High-throughtput Bioinformatics in Biomedical Sciences</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>2:40 - 3:10</td>
+  				<td class='session'>V-4</td>
+  				<td class='event'>
+  					<b>Shankar Subramaniam</b>, Dept. of Bioengineering and IEM, UCSD<br />
+  					<i>Macrophage biology through the “Omics” lens</i>
+  				</td>
+  			</tr>
+  			
+  			<tr>
+  				<td class='date'>3:10 - 3:30</td>
+  				<td class='session'></td>
+  				<td class='event'>
+  					<b>Intermission</b>
+  				</td>
+  			</tr>				
+  			
+  			<tr><th colspan='3'>Session VI: Virology, Immunity and Molecular Structure</th></tr>
+  			<tr>
+  			  <td class='moderators' colspan='2'>Moderators:</td>
+  			  <td colspan='2'>
+  			    <b>Tzu-Hao Cheng</b>, Inst. Biochemistry &amp; Molecular Biology, NYMU<br />
+  			    <b>Christopher K. Glass</b>, Depts. Cellular &amp; Molecular Medicine and Medicine, and IEM, UCSD
+  			  </td>
+  			</tr>
+  			
+  			<tr>
+  				<td class='date'>3:30 - 4:00</td>
+  				<td class='session'>VI-1</td>
+  				<td class='event'>
+  				  <b>Jenn-Kang Hwang</b>, Inst. of Bioinformatics, NCTU<br />
+  				  <i>Evolutionary information hidden in a single protein structure</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>4:00 - 4:30</td>
+  				<td class='session'>VI-2</td>
+  				<td class='event'>
+  					<b>Rommie Amaro</b>, Dept. of Chemistry &amp; Biochemistry, UCSD<br />
+  					<i>Multiscale Simulations of Influenza Virus A Glycoproteins</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>4:30 - 5:00</td>
+  				<td class='session'>VI-3</td>
+  				<td class='event'>
+  					<b>Yueh-Hsin Ping</b>, Inst. of Pharmacology, NYMU<br />
+  					<i>The Virus-Host Interaction of Dengue Virus</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>5:00 - 5:30</td>
+  				<td class='session'>VI-4</td>
+  				<td class='event'>
+  					<b>Christopher K. Glass</b>, Depts of Cellular &amp; Molecular Medicine and Medicine, and IEM, UCSD<br />
+  					<i>Potential Roles of 25 Hydroxy Cholesterol in Innate Anti-Viral Immunity</i>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td class='date'>5:30 - 6:00</td>
+  				<td class='session'>VI-4</td>
+  				<td class='event'>
+  					<b>Yuru V. Shih</b>, Depts. Bioengineering and Chemistry & Biochemistry, and IEM, UCSD, and Inst. Clinical Medicine and Stem Cell Research Center, NYMU<br />
+  					<i>Engineered Matrix induces Osteogenic Differentiation of Stem Cells through Adenosine Signaling</i>
+  				</td>
+  			</tr>
+  			
+      </table>
+    </div>
+
+    
+  </div>  
+</section>
+
+<% content_for(:title) do %>" :: Program"<% end %>

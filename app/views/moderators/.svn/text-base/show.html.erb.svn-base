@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @moderator.first_name %>
+</p>
+
+<p>
+  <b>Middle name:</b>
+  <%= @moderator.middle_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @moderator.last_name %>
+</p>
+
+<p>
+  <b>Affiliaiton:</b>
+  <%= @moderator.affiliaiton %>
+</p>
+
+
+<%= link_to 'Edit', edit_moderator_path(@moderator) %> |
+<%= link_to 'Back', moderators_path %>

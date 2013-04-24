@@ -1,0 +1,1 @@
+<b><%= link_to moderators.name, ('/2013' + moderators.biosketch.url) %></b>, <%= moderators.affiliaiton %><br />
