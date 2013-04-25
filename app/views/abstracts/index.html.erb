@@ -22,7 +22,7 @@
     <section id="keyword_cloud">
       <h1>Keyword Cloud</h1>
       <% tag_cloud(@keywords, %w(css1 css2 css3 css4 css5 css6 css7)) do |k, css_class| %>
-        <%= link_to k.name, keyword_abstracts_url(:keyword => k.name), :class => "#{css_class}", :title => k.name %>
+        <%= link_to k.name, keyword_abstracts_url(:keyword => k.name), :class => "#{css_class}" %>
       <% end %>
     </section>
   <%- end -%>
