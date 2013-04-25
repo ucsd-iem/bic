@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  
+  after_filter :import_new_tickets, only: :thanks
   layout 'sponsors', :only => [:sponsors]
   
   def home
@@ -7,7 +7,12 @@ class PagesController < ApplicationController
   end
 
   def thanks
-    #logger.info  "Importing attendee data from Eventbrite."
-    #EventbriteImporter.import_tickets    
+  end
+  
+  private
+  
+  def import_new_tickets
+    logger.info  "Importing attendee data from Eventbrite."
+    EventbriteImporter.import_tickets
   end
 end
