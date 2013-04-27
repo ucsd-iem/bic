@@ -16,12 +16,14 @@
   
   <hr />
   
-  <section id='announcements'>
-    <h2>Announcements</h2>
-    <%= @announcements.empty? ? content_tag(:h3, "No announcements yet.", :class => :alert) : render('announcements') %>
-  </section>
-  
-  <hr />
+  <%- unless @announcements.empty? -%>
+    <section id='announcements'>
+      <h2>Announcements</h2>
+      <%= @announcements.empty? ? content_tag(:h3, "No announcements yet.", :class => :alert) : render('announcements') %>
+    </section>
+
+    <hr />
+  <%- end -%>
   
   <p><em>The 14th Annual UC System-wide Bioengineering Symposium is committed to ensuring an inclusive environment and diverse body of students, academic researchers and faculty participating in the event. The University of California is an Equal Opportunity/Affirmative Action Employer with a strong institutional commitment to excellence through diversity.</em></p>
 </section>
