@@ -46,7 +46,9 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
     h4 { font-weight:100; }
   }
 
-  .navbar { margin:0.4em 0; }
+  .navbar { margin:0.4em 0; 
+    .nav>li>a { padding:10px 13px 10px; }
+  }
 
   header { margin:1em 0;
     
