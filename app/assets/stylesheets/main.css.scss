@@ -86,6 +86,7 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
 
   
   #abstracts {
+    h1 { clear:both; }
     .accordion-group { border:0; margin-bottom:0.6em;}
     .accordion-heading { 
       p { margin:0; 
@@ -106,7 +107,7 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
     .css6 { font-size: 1.4em; }
     .css7 { font-size: 1.6em; }
   }
-  
+
   #attendance { margin-bottom:1em; }
     
   .field { clear:both; }
@@ -121,6 +122,9 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
       -moz-border-radius: 3px;
       border-radius: 3px;
       }
+  }
+
+  #faq { 
   }
   
   #error_explanation {   

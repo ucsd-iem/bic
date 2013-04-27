@@ -9,6 +9,7 @@
       <li <%= "class=active" if current_page?(register_url) %>><%= link_to 'Registration', register_url %></li>
       <li <%= "class=active" if current_page?(contact_url) %>><%= link_to 'Contact Us', contact_url %></li>
       <li <%= "class=active" if current_page?(sponsors_url) %>><%= link_to 'Sponsors', sponsors_url %></li>
+      <li <%= "class=active" if current_page?(faq_url) %>><%= link_to 'FAQ', faq_url %></li>
       <%= content_tag :li, link_to('Log Out', destroy_attendee_session_url, :method => :delete) if current_attendee %>
     </ul>
   </div>
