@@ -1,6 +1,6 @@
 <section id='abstracts'>
   <p class='pull-right'><%= link_to "Submit or edit an abstract", new_attendee_session_url, :class => "btn btn-large btn-success" %></p>
-  <h1>Abstracts <%= "matching keyword: #{params[:keyword]}" if params[:keyword] %></h1>
+  <h1>Abstracts <%= "matching keyword: #{params[:keyword]}" if params[:keyword] %><%= "matching query: #{params[:q]}" if params[:q] %></h1>
   
   <%= content_tag(:h3, "No abstracts", :class => :alert) if @abstracts && @abstracts.empty?  %>
   
