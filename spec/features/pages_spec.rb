@@ -13,7 +13,7 @@ describe "Pages" do
     
     describe 'announcements' do
       it "should display a filler message when there are no announcements" do
-        page.should have_content('No announcements yet.')
+        page.should_not have_content('No announcements yet.')
       end
 
       it "should display the announcement title and body when there are announcements" do
