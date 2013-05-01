@@ -8,7 +8,7 @@ describe AbstractsController do
         attendee.abstracts.create FactoryGirl.attributes_for(:abstract)
 
         get :index
-        assigns(:abstracts).should eq(attendee.abstracts)
+        assigns(:abstracts).should eq(Abstract.all)
       end      
     end
 
