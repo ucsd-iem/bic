@@ -21,6 +21,8 @@ class Abstract < ActiveRecord::Base
   has_attached_file :poster
   has_attached_file :presentation
   
+  paginates_per 10
+  
   validates :title, :presence => true, :uniqueness => true
   validates :authors, :presence => true
   validates :affiliations, :presence => true

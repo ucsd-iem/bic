@@ -26,6 +26,7 @@ Ust::Application.routes.draw do
   resources :abstracts do
     collection do
       get 'keyword/:keyword' => 'abstracts#keyword', :as => :keyword
+      get 'page/:page', :action => :index
       get 'search/:query' => 'abstracts#search', :as => :search
     end
   end

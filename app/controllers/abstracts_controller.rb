@@ -7,7 +7,7 @@ class AbstractsController < ApplicationController
   # GET /abstracts
   # GET /abstracts.json
   def index
-    @abstracts = Abstract.order('created_at DESC')
+    @abstracts = Abstract.order('created_at DESC').page params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
