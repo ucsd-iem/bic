@@ -16,7 +16,9 @@
         </div>
     </article>        
   <% end %>
-
+  
+  <%= paginate @abstracts, :window => 2 %>
+  
   <%- content_for :right do -%>
 
     <section id="keyword_cloud">
