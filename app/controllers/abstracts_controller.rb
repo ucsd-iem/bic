@@ -87,7 +87,7 @@ class AbstractsController < ApplicationController
   end
     
   def keyword
-    @abstracts = Abstract.tagged_with(params[:keyword])
+    @abstracts = Abstract.tagged_with(params[:keyword]).page params[:page]
     
     respond_to do |format|
       format.html { render action: :index}
