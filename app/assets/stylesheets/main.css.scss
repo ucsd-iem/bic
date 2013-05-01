@@ -98,16 +98,16 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
   
   #keyword_cloud { overflow:hidden;
     h2 { margin:2em 0 0;}
-    a { background-color: $cloudy_blue; border-radius: 3px; color: white; display: inline-block; padding: 3px 5px 3px; margin:3px; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); -webkit-border-radius: 3px; -moz-border-radius: 3px; }
+    a { border-radius: 3px;  display: inline-block; margin:3px; }
     a:hover {
         }
-    .css1 { font-size: 0.3em; }
-    .css2 { font-size: 0.5em; }
-    .css3 { font-size: 0.7em; }
-    .css4 { font-size: 1em; }
-    .css5 { font-size: 1.2em; }
-    .css6 { font-size: 1.4em; }
-    .css7 { font-size: 1.6em; }
+    .css1 { font-size: 0.5em; }
+    .css2 { font-size: 0.7em; }
+    .css3 { font-size: 1em; }
+    .css4 { font-size: 1.2em; }
+    .css5 { font-size: 1.4em; }
+    .css6 { font-size: 1.6em; }
+    .css7 { font-size: 1.8em; }
   }
 
   #attendance { margin-bottom:1em; }

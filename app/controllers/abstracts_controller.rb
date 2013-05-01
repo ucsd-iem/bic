@@ -97,8 +97,9 @@ class AbstractsController < ApplicationController
     
   protected
   
+  # tag clound consisting of the top 34 keywords sorted by name
   def tag_cloud
-    @keywords = Abstract.tag_counts_on(:keywords).shuffle[0..33] 
+    @keywords = Abstract.tag_counts_on(:keywords).sort_by { |keyword| keyword.count }.reverse[0..33].sort_by { |keyword| keyword.name }
   end
 
 end
