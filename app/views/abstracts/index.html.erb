@@ -1,6 +1,6 @@
 <section id='abstracts'>
   <p class='pull-right'><%= link_to "Submit or edit an abstract", new_attendee_session_url, :class => "btn btn-large btn-success" %></p>
-  <h1>Abstracts <%= "matching keyword: #{params[:keyword]}" if params[:keyword] %><%= "matching query: #{params[:q]}" if params[:q] %></h1>
+  <h1>Abstracts <%= "matching keyword: #{params[:keyword]}" if params[:keyword] %><%= "matching query: #{params[:query]}" if params[:query] %></h1>
   
   <%= content_tag(:h3, "No abstracts", :class => :alert) if @abstracts && @abstracts.empty?  %>
   
@@ -22,6 +22,12 @@
   <%- content_for :right do -%>
 
     <section id="keyword_cloud">
+      <h1>Search</h1>
+      <%= form_tag friendly_url_for_search_abstracts_path(params[:query]), method: :get do %>
+        <div class="control-group">
+          <%= text_field_tag :query, params[:query], :class => 'input', :placeholder => '' %>
+        </div>
+      <% end %>
       <h1>Keyword Cloud</h1>
       <% tag_cloud(@keywords, %w(css1 css2 css3 css4 css5 css6 css7)) do |k, css_class| %>
         <%= link_to k.name, keyword_abstracts_url(:keyword => k.name), :class => "#{css_class}" %>

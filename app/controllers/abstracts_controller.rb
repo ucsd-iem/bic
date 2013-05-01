@@ -1,7 +1,7 @@
 class AbstractsController < ApplicationController
 
   #Filter chain halted as :require_no_authentication rendered or redirected 
-  before_filter :authenticate_attendee!, :except => [:index, :keyword, :search, :show, :submit, :verify]
+  before_filter :authenticate_attendee!, :except => [:index, :friendly_url_for_search, :keyword, :search, :show, :submit, :verify]
   before_filter :tag_cloud, :only => [:index, :keyword, :search, :show]
 
   # GET /abstracts
@@ -89,6 +89,19 @@ class AbstractsController < ApplicationController
   def keyword
     @abstracts = Abstract.tagged_with(params[:keyword]).page params[:page]
     
+    respond_to do |format|
+      format.html { render action: :index}
+      format.json { render json: [@abstracts] }
+    end
+  end
+
+  def friendly_url_for_search
+    redirect_to search_abstracts_path(query: params[:query]) if params[:utf8]    
+  end
+  
+  def search
+    @abstracts = Abstract.with_query(params[:query]).page params[:page]
+        
     respond_to do |format|
       format.html { render action: :index}
       format.json { render json: [@abstracts] }

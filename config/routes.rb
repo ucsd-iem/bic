@@ -28,6 +28,7 @@ Ust::Application.routes.draw do
       get 'keyword/:keyword' => 'abstracts#keyword', :as => :keyword
       get 'page/:page', :action => :index
       get 'search/:query' => 'abstracts#search', :as => :search
+      get 'search' => 'abstracts#friendly_url_for_search', :as => :friendly_url_for_search
     end
   end
 

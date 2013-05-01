@@ -1,6 +1,8 @@
 class Abstract < ActiveRecord::Base
   attr_accessible :title, :authors, :affiliations, :email, :keyword_list, :body, :personal_statement, :year, :biosketch, :poster, :presentation, :position, :event_attributes, :event_id, :presenter_first_name, :presenter_middle_name, :presenter_last_name, :presenter_affiliation, :video_url, :attendee_id, :order_id, :event_attributes, :attendee_attributes
   
+  acts_as_indexed :fields => [:title, :authors, :affiliations, :email, :keyword_list, :body ]
+  
   belongs_to :attendee, :class_name => "Attendee", :foreign_key => "attendee_id"
 #  belongs_to :event, :class_name => "Event", :foreign_key => "event_id"
   accepts_nested_attributes_for :attendee
