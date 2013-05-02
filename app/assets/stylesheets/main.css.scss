@@ -23,8 +23,8 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
  -moz-background-size: cover;
  -o-background-size: cover;
  background-size: cover;
- filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.aerial-scripps.jpg', sizingMethod='scale');
- -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='aerial-scripps.jpg', sizingMethod='scale')";
+ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./2013/assets/aerial-scripps.jpg', sizingMethod='scale');
+ -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/2013/assets/aerial-scripps.jpg', sizingMethod='scale')";
  height:100%;
 
   h1,h2,h3,h4,h5,h6 { font-weight:300; }
