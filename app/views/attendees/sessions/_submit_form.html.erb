@@ -2,5 +2,5 @@
   <%= devise_error_messages! %>
   <%= f.email_field :email, :placeholder => 'Email'  %>
   <%= f.password_field :password, :placeholder => 'Order #' %>
-  <%= f.submit "Submit Abstract", :class => "btn" %>
+  <%= f.submit Time.now < abstract_deadline ? 'Submit Abstract' : 'Edit Abstract', :class => "btn" %>
 <% end %>

@@ -1,7 +1,13 @@
 <section>
   <h1>Submit an Abstract</h1>
 
-  <%= render 'form' %>
-
-  <%= link_to 'Back', '#',  :class => 'btn btn-small' %>  
+  <%- if Time.now < abstract_deadline -%>
+    <%= render 'form' %>
+  <%- else -%>
+    <div class='alert'>
+      <p>The deadline for submitting a new abstract has passed.</p>
+    </div>
+  <%- end -%>
+  
+  <%= link_to 'Back', abstracts_path,  :class => 'btn btn-small' %>  
 </section>

@@ -1,7 +1,9 @@
 <section class='page'>
-  <h1>Submit an abstract</h1>
-  <h3>Deadline <span class='alert'><strike>April&nbsp;29, 5:00 PM PDT</strike></span> <span class='alert'>May&nbsp;3, 5:00 PM PDT</span></h3>
-
+  <%= content_tag :h1, Time.now < abstract_deadline ? 'Submit an abstract' : 'Edit your abstract(s)' %>
+  <h3>Deadline <span class='alert'><strike>April&nbsp;29, 5:00 PM</strike></span> <span class='alert'>May&nbsp;3, 5:00 PM PDT</span></h3>
+  
+  <%= content_tag :p, raw("The deadline has now passed.  You may make modifications to your abstract until <b>May&nbsp;6, 12:00 PM</b>"), class: 'alert-info' if Time.now > abstract_deadline %>
+  
 	<p>
     We invite original contributions from undergraduates, graduate students, post docs, and faculty in any area of bioengineering and biomedical engineering, including but not limited to:
     <em>Bioengineering Analysis of Disease</em>,
