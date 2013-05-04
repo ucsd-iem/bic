@@ -1,3 +1,4 @@
+<% title "Abstracts #{"matching keyword: #{params[:keyword]}" if params[:keyword]}#{ "matching query: params[:query]" if params[:query] }- #{event_title}" %>
 <section id='abstracts'>
   <p class='pull-right'><%= link_to "Submit or edit an abstract", new_attendee_session_url, :class => "btn btn-large btn-success" %></p>
   <h1>Abstracts <%= "matching keyword: #{params[:keyword]}" if params[:keyword] %><%= "matching query: #{params[:query]}" if params[:query] %></h1>
