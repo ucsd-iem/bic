@@ -9,4 +9,12 @@ module ApplicationHelper
     @html << '<h1>Sponsors</h1>'
     @html
   end
+  
+  def event_title
+    '14th UC Systemwide Bioengineering Symposium'
+  end
+  
+  def title(title=event_title)
+    content_for :title, title.to_s
+  end
 end

@@ -31,9 +31,7 @@ Ust::Application.routes.draw do
       get 'search' => 'abstracts#friendly_url_for_search', :as => :friendly_url_for_search
     end
   end
-
-  resources :events
-  resources :moderators
+  
   # resources :registrants, :only => [:new, :create, :update]
 
   # The priority is based upon order of creation:
