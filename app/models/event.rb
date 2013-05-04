@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
-  attr_accessible :abstract_ids, :location, :start, :stop, :title, :moderator_ids
-  has_many :abstracts
+  attr_accessible :location, :start, :stop, :title, :moderator_ids
+  # has_many :abstracts
   # has_many :moderators
   validates :start, :presence => true
   validates :stop, :presence => true

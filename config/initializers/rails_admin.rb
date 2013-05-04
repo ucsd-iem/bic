@@ -65,9 +65,9 @@ RailsAdmin.config do |config|
       field :year
       field :position
       field :email
-      field :event do
-        nested_form false
-      end
+#      field :event do
+#        nested_form false
+#      end
     end
     
     list do
@@ -97,9 +97,9 @@ RailsAdmin.config do |config|
       end
       field :location
 
-      field :abstracts do
-        nested_form false
-      end
+#      field :abstracts do
+#        nested_form false
+#      end
 #      field :moderators do
 #        nested_form false
 #      end    

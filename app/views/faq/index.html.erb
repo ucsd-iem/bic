@@ -1,0 +1,14 @@
+<% title "FAQ - #{event_title}" %>
+
+<section id='abstracts'>
+  <h1>FAQ <%= "matching query: #{params[:q]}" if params[:q] %></h1>
+  
+  <%= content_tag(:h3, "No questions in this FAQ", :class => :alert) if @faqs && @faqs.empty?  %>
+  
+  <% @faqs.each do |faq| %>
+    <dl class="faqs" id="faq_<%= faq.id %>">
+  	  <%= content_tag :dt, faq.question %>
+      <%= content_tag :dd, faq.answer %>
+    </dl>
+  <% end %>  
+</section>

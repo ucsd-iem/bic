@@ -1,13 +1,13 @@
 class AbstractsController < ApplicationController
 
   #Filter chain halted as :require_no_authentication rendered or redirected 
-  before_filter :authenticate_attendee!, :except => [:index, :keyword, :search, :show, :submit, :verify]
+  before_filter :authenticate_attendee!, :except => [:index, :friendly_url_for_search, :keyword, :search, :show, :submit, :verify]
   before_filter :tag_cloud, :only => [:index, :keyword, :search, :show]
 
   # GET /abstracts
   # GET /abstracts.json
   def index
-    @abstracts = Abstract.all
+    @abstracts = Abstract.order('created_at DESC').page params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
@@ -87,8 +87,21 @@ class AbstractsController < ApplicationController
   end
     
   def keyword
-    @abstracts = Abstract.tagged_with(params[:keyword])
+    @abstracts = Abstract.tagged_with(params[:keyword]).page params[:page]
     
+    respond_to do |format|
+      format.html { render action: :index}
+      format.json { render json: [@abstracts] }
+    end
+  end
+
+  def friendly_url_for_search
+    redirect_to search_abstracts_path(query: params[:query]) if params[:utf8]    
+  end
+  
+  def search
+    @abstracts = Abstract.with_query(params[:query]).page params[:page]
+        
     respond_to do |format|
       format.html { render action: :index}
       format.json { render json: [@abstracts] }
@@ -97,8 +110,9 @@ class AbstractsController < ApplicationController
     
   protected
   
+  # tag clound consisting of the top 34 keywords sorted by name
   def tag_cloud
-    @keywords = Abstract.tag_counts_on(:keywords).shuffle[0..33] 
+    @keywords = Abstract.tag_counts_on(:keywords).sort_by { |keyword| keyword.count }.reverse[0..33].sort_by { |keyword| keyword.name }
   end
 
 end

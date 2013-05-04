@@ -5,10 +5,10 @@ describe AbstractsController do
     describe "#index (GET /abstracts)" do
       it "returns a list of all abstracts" do
         attendee = FactoryGirl.create(:attendee)
-        attendee.abstracts.create FactoryGirl.attributes_for(:abstract)      
+        attendee.abstracts.create FactoryGirl.attributes_for(:abstract)
 
         get :index
-        assigns(:abstracts).should eq(attendee.abstracts)
+        assigns(:abstracts).should eq(Abstract.all)
       end      
     end
 

@@ -34,11 +34,16 @@ group :assets do
 end
 
 group :development do
+  gem 'awesome_print'
   gem "better_errors"
   gem 'binding_of_caller'
   gem 'debugger'
+  gem 'bond'
+  gem 'crack'
+  gem 'hirb-unicode'
   gem 'map_by_method'
   gem 'meta_request'
+  gem 'net-http-spy'
   gem 'rb-fchange', :require => false
   gem 'rb-fsevent', :require => false
   gem 'rb-inotify', :require => false
@@ -50,10 +55,13 @@ end
 
 group :test, :development do
   gem 'capybara'
+  gem "capybara-webkit"
   gem 'database_cleaner'
+  gem 'debugger'
   gem 'faker'
   gem 'factory_girl_rails'
   gem 'launchy'
+  gem 'poltergeist'
   gem "rspec-rails", "~> 2.0"
 end
 

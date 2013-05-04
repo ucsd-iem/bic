@@ -23,8 +23,8 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
  -moz-background-size: cover;
  -o-background-size: cover;
  background-size: cover;
- filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
- -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./2013/assets/aerial-scripps.jpg', sizingMethod='scale');
+ -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/2013/assets/aerial-scripps.jpg', sizingMethod='scale')";
  height:100%;
 
   h1,h2,h3,h4,h5,h6 { font-weight:300; }
@@ -46,7 +46,9 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
     h4 { font-weight:100; }
   }
 
-  .navbar { margin:0.4em 0; }
+  .navbar { margin:0.4em 0; 
+    .nav>li>a { padding:10px 13px 10px; }
+  }
 
   header { margin:1em 0;
     
@@ -78,7 +80,7 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
   .logos {
     table { margin:0; }
     td { list-style-type: none; margin:10px 4px; vertical-align: middle; width:126px; 
-      img { margin:10px 0; }
+      img { margin:10px 0; width:126px; }
       a { clear:both; display:block; }
       a.more { display:inline; }
     }
@@ -86,6 +88,7 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
 
   
   #abstracts {
+    h1 { clear:both; }
     .accordion-group { border:0; margin-bottom:0.6em;}
     .accordion-heading { 
       p { margin:0; 
@@ -95,18 +98,18 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
   
   #keyword_cloud { overflow:hidden;
     h2 { margin:2em 0 0;}
-    a { background-color: $cloudy_blue; border-radius: 3px; color: white; display: inline-block; padding: 3px 5px 3px; margin:3px; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); -webkit-border-radius: 3px; -moz-border-radius: 3px; }
+    a { border-radius: 3px;  display: inline-block; margin:3px; }
     a:hover {
         }
-    .css1 { font-size: 0.3em; }
-    .css2 { font-size: 0.5em; }
-    .css3 { font-size: 0.7em; }
-    .css4 { font-size: 1em; }
-    .css5 { font-size: 1.2em; }
-    .css6 { font-size: 1.4em; }
-    .css7 { font-size: 1.6em; }
+    .css1 { font-size: 0.5em; }
+    .css2 { font-size: 0.7em; }
+    .css3 { font-size: 1em; }
+    .css4 { font-size: 1.2em; }
+    .css5 { font-size: 1.4em; }
+    .css6 { font-size: 1.6em; }
+    .css7 { font-size: 1.8em; }
   }
-  
+
   #attendance { margin-bottom:1em; }
     
   .field { clear:both; }
@@ -121,6 +124,9 @@ background: url(aerial-scripps.jpg) no-repeat center center fixed;
       -moz-border-radius: 3px;
       border-radius: 3px;
       }
+  }
+
+  #faq { 
   }
   
   #error_explanation {   

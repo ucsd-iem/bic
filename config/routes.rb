@@ -1,6 +1,9 @@
 Ust::Application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
+  get "faq/index"
 
+  get "faq/search"
+
+  mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :attendees, :path => '', :path_names => {:sign_in => '/abstracts/submit', :sign_out => 'logout'}
@@ -17,16 +20,18 @@ Ust::Application.routes.draw do
   get "/sponsors" => "pages#sponsors"
   get "/terms" => "pages#terms"
   get "/thanks" => "pages#thanks"
-
+  get "/faq" => "faq#index"
+  get "/faq/:q" => "faq#search"
+  
   resources :abstracts do
     collection do
       get 'keyword/:keyword' => 'abstracts#keyword', :as => :keyword
+      get 'page/:page', :action => :index
       get 'search/:query' => 'abstracts#search', :as => :search
+      get 'search' => 'abstracts#friendly_url_for_search', :as => :friendly_url_for_search
     end
   end
-
-  resources :events
-  resources :moderators
+  
   # resources :registrants, :only => [:new, :create, :update]
 
   # The priority is based upon order of creation:

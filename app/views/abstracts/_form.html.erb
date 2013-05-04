@@ -37,7 +37,8 @@
 
   <div class="control-group">
     <%#= f.label :body %>
-    <%= f.text_area :personal_statement, :rows => 4, :class => 'input-xxlarge', :placeholder => "Personal Statement: Describe in a few words why your research should be chosen for an oral presentation" %>
+    <p class='muted'>*Only for those interested in oral presentations.</p>
+    <%= f.text_area :personal_statement, :rows => 4, :class => 'input-xxlarge', :placeholder => "Personal Statement: For those interested in an oral presentation, please provide a short statement why you feel your research should be chosen by the program committee." %>
   </div>
 
   <div class='row'>
