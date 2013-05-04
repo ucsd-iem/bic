@@ -20,7 +20,8 @@ class EventbriteImporter
     end
     
     def attendees
-      self.client.event_list_attendees(:id => '5146078058')['attendees']
+    #  self.client.event_list_attendees(:id => '5146078058')['attendees']
+      self.client.event_list_attendees(:id => '5146078058', :modified_after => (Time.now-1.day).strftime("%Y-%m-%d %H:%M:%S")
     end
     
     private
