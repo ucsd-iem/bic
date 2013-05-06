@@ -64,10 +64,10 @@ RailsAdmin.config do |config|
       field :body
       field :year
       field :position
-      field :email
-#      field :event do
-#        nested_form false
-#      end
+      field :attendee do
+        nested_form false
+      end
+
     end
     
     list do

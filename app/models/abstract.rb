@@ -8,6 +8,7 @@ class Abstract < ActiveRecord::Base
   accepts_nested_attributes_for :attendee
 #  belongs_to :event, :inverse_of => :abstracts
 #  accepts_nested_attributes_for :event
+  validates_presence_of :attendee
   
   after_create :deliver_confirmation
   after_save :deliver_update
