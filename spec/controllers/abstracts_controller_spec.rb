@@ -96,29 +96,51 @@ describe AbstractsController do
         sign_in @attendee
       
         get :new
-        assigns(:abstract).attendee.should eq(@attendee)
+        if Time.now > DateTime.new(2013,5,3,17,15).change(offset: '-0700')
+          response.should redirect_to abstracts_path
+        else
+          assigns(:abstract).attendee.should eq(@attendee)
+        end
       end      
     end
        
     describe "#create (POST /abstracts/create)" do
       context "with valid attributes" do
         before { post :create, abstract: FactoryGirl.attributes_for(:abstract) }
-        it "creates a new abstract for the attendee" do
-          assigns(:abstract).attendee.should eq(@attendee)
-        end
-        it "redirects to abstracts#show for review" do
-          response.should redirect_to abstract_url(@attendee.abstract)
+
+        if Time.now > DateTime.new(2013,5,3,17,15).change(offset: '-0700')
+          it "redirects to abstracts page since the deadline has passed" do
+            response.should redirect_to abstracts_path
+          end          
+        else
+          it "creates a new abstract for the attendee" do
+            assigns(:abstract).attendee.should eq(@attendee)
+          end
+          it "redirects to abstracts#show for review" do
+            response.should redirect_to abstract_url(@attendee.abstract)
+          end
         end
       end
 
       context "with INVALID attributes" do
         before { post :create, abstract: FactoryGirl.attributes_for(:abstract, title: nil) }
-        it "will NOT save the new abstract" do
-          assigns(:abstract).should_not be_valid
-        end
-        it "re-renders abstracts#new" do
-          post :create, abstract: FactoryGirl.attributes_for(:abstract, title: nil)
-          response.should render_template :new
+
+        if Time.now > DateTime.new(2013,5,3,17,15).change(offset: '-0700')
+          it "redirects to abstracts page since the deadline has passed" do
+            response.should redirect_to abstracts_path
+          end
+        else
+          it "will NOT save the new abstract" do
+            assigns(:abstract).should_not be_valid
+          end
+          it "re-renders abstracts#new" do
+            post :create, abstract: FactoryGirl.attributes_for(:abstract, title: nil)
+            if Time.now > DateTime.new(2013,5,3,17,15).change(offset: '-0700')
+              response.should redirect_to abstracts_path
+            else
+              response.should render_template :new
+            end
+          end
         end
       end
     end
@@ -128,7 +150,11 @@ describe AbstractsController do
         @attendee.abstracts.create FactoryGirl.attributes_for(:abstract)
         
         get :edit, id: @attendee.abstract
-        assigns(:abstract).attendee.should eq(@attendee)
+        if Time.now > DateTime.new(2013,5,3,17,15).change(offset: '-0700')
+          response.should redirect_to abstracts_path
+        else
+          assigns(:abstract).attendee.should eq(@attendee)
+        end
       end      
     end
        
@@ -138,31 +164,43 @@ describe AbstractsController do
       context "with valid attributes" do
         before { put :update, id: @attendee.abstract, abstract: { :title => "hello" } }
 
-        it "locates the existing abstract" do
-          assigns(:abstract).should eq(@attendee.abstract)
-        end
-        it "updates the abstracts attributes" do
-          assigns(:abstract).title.should eq('hello')
-        end
-        it "redirects to abstracts#show for review" do
-          response.should redirect_to abstract_url(@attendee.abstract)
+        if Time.now > DateTime.new(2013,5,3,17,15).change(offset: '-0700')
+          it "redirects to abstracts page since the deadline has passed" do
+            response.should redirect_to abstracts_path
+          end
+        else
+          it "locates the existing abstract" do
+            assigns(:abstract).should eq(@attendee.abstract)
+          end
+          it "updates the abstracts attributes" do
+            assigns(:abstract).title.should eq('hello')
+          end
+          it "redirects to abstracts#show for review" do
+            response.should redirect_to abstract_url(@attendee.abstract)
+          end
         end
       end
 
       context "with invalid attributes" do
         before { put :update, id: @attendee.abstract, abstract: FactoryGirl.attributes_for(:abstract, title: nil) }
-          
-        it "locates the existing abstract" do
-          assigns(:abstract).should eq(@attendee.abstract)
-        end
-        it "will NOT update the abstract" do
-          assigns(:abstract).title.should_not eq('hello')
-        end        
-        it "will retain the invalid attribute in the instance variable" do
-          assigns(:abstract).title.should be nil
-        end        
-        it "re-renders abstracts#edit" do
-          response.should render_template :edit
+
+        if Time.now > DateTime.new(2013,5,3,17,15).change(offset: '-0700')
+          it "redirects to abstracts page since the deadline has passed" do
+            response.should redirect_to abstracts_path
+          end
+        else
+          it "locates the existing abstract" do
+            assigns(:abstract).should eq(@attendee.abstract)
+          end
+          it "will NOT update the abstract" do
+            assigns(:abstract).title.should_not eq('hello')
+          end        
+          it "will retain the invalid attribute in the instance variable" do
+            assigns(:abstract).title.should be nil
+          end        
+          it "re-renders abstracts#edit" do
+            response.should render_template :edit
+          end
         end
       end
     end
@@ -170,12 +208,19 @@ describe AbstractsController do
     describe "#destroy (DELETE /abstracts/1)" do
       before { @attendee.abstracts.create FactoryGirl.attributes_for(:abstract) }
           
-      it "deletes the abstract" do
-        expect{ delete :destroy, id: @attendee.abstract }.to change(Abstract,:count).by(-1)
-      end
-      it "redirects to abstracts#index" do
-        delete :destroy, id: @attendee.abstract
-        pending
+      if Time.now > DateTime.new(2013,5,3,17,15).change(offset: '-0700')
+        it "redirects to abstracts page since the deadline has passed" do
+          delete :destroy, id: @attendee.abstract
+          response.should redirect_to abstracts_path
+        end
+      else
+        it "deletes the abstract" do
+          expect{ delete :destroy, id: @attendee.abstract }.to change(Abstract,:count).by(-1)
+        end
+        it "redirects to abstracts#index" do
+          delete :destroy, id: @attendee.abstract
+          pending
+        end
       end
     end
   end

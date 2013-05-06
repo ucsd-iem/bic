@@ -55,6 +55,15 @@ RailsAdmin.config do |config|
   
   ###  User  ###
   
+  config.model 'Attendee' do
+    edit do
+      field :first_name
+      field :last_name
+      field :email
+      field :password
+    end
+  end
+  
   config.model 'Abstract' do
     edit do
       field :title

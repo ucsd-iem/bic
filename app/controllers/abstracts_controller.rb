@@ -3,11 +3,12 @@ class AbstractsController < ApplicationController
   #Filter chain halted as :require_no_authentication rendered or redirected 
   before_filter :authenticate_attendee!, :except => [:index, :friendly_url_for_search, :keyword, :search, :show, :submit, :verify]
   before_filter :tag_cloud, :only => [:index, :keyword, :search, :show]
+  before_filter :edit_abstract_deadline, :except => [:index, :friendly_url_for_search, :keyword, :search, :show ]
 
   # GET /abstracts
   # GET /abstracts.json
   def index
-    @abstracts = Abstract.order('created_at DESC').page params[:page]
+    @abstracts = Abstract.order('created_at ASC').page params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
@@ -107,8 +108,13 @@ class AbstractsController < ApplicationController
       format.json { render json: [@abstracts] }
     end
   end
-    
+  
+  
   protected
+
+  def edit_abstract_deadline
+    redirect_to abstracts_path, notice: 'You can no longer modify abstracts. Please contact bic@ucop.edu if you need assistance.' if Time.now > DateTime.new(2013,5,3,17,15).change(offset: '-0700')
+  end
   
   # tag clound consisting of the top 34 keywords sorted by name
   def tag_cloud

@@ -16,7 +16,7 @@ class EventbriteImporter
     
     def import_tickets
       response = attendees
-      if respose.kind_of?(Array)
+      if response.kind_of?(Array)
         response.map {|a| create_or_update_tickets a['attendee']}
       else
         return

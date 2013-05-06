@@ -10,7 +10,7 @@
 
   <div id="buttons">
     <%= link_to 'Register Now', register_url, :class => 'btn btn-large btn-success', :id => :register %>
-    <%= link_to Time.now < abstract_deadline ? 'Submit Your Abstract' : 'Edit Your Abstract', new_attendee_session_url, :class => 'btn btn-large btn-success' %>
+    <%= link_to Time.now < abstract_deadline ? 'Submit Your Abstract' : 'Edit Your Abstract', new_attendee_session_url, :class => 'btn btn-large btn-success' if Time.now < abstract_deadline %>
   </div>
   
   <hr />
