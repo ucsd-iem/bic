@@ -1,5 +1,5 @@
 class Abstract < ActiveRecord::Base
-  attr_accessible :title, :authors, :affiliations, :email, :keyword_list, :body, :personal_statement, :year, :biosketch, :poster, :presentation, :position, :event_attributes, :event_id, :presenter_first_name, :presenter_middle_name, :presenter_last_name, :presenter_affiliation, :video_url, :attendee_id, :order_id, :event_attributes, :attendee_attributes
+  attr_accessible :affiliations, :attendee_attributes, :attendee_id, :authors, :biosketch, :body, :email, :event_attributes, :event_attributes, :event_id, :keyword_list, :order_id, :personal_statement, :position, :poster, :poster_number, :presentation, :presenter_affiliation, :presenter_first_name, :presenter_last_name, :presenter_middle_name, :session, :title, :video_url, :year
   
   acts_as_indexed :fields => [:title, :authors, :affiliations, :email, :keyword_list, :body ]
   

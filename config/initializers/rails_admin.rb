@@ -76,7 +76,8 @@ RailsAdmin.config do |config|
       field :attendee do
         nested_form false
       end
-
+      field :session
+      field :poster_number
     end
     
     list do

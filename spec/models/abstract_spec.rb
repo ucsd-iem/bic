@@ -1,6 +1,20 @@
 require 'spec_helper'
 
 describe Abstract do
+  before { @abstract = FactoryGirl.create(:abstract, attendee: FactoryGirl.create(:attendee)) }
+  it 'is valid with a title, list of authors, affiliations, body, and associated Attendee' do
+    expect(@abstract).to be_valid
+  end
+
+  %w{ title authors affiliations body attendee }.each do |m|    
+    it "is invalid without a #{m}" do
+      @abstract.send("#{m}=".to_sym, nil)
+      expect(@abstract).to have(1).errors_on(m.to_sym)
+      expect(@abstract).to be_invalid
+    end
+  end
+  
+  
   describe "email confirmation" do
     context "created abstract" do
       before do
