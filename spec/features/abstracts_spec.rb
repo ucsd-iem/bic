@@ -6,19 +6,20 @@ describe "Abstracts" do
       visit abstracts_url
       page.should have_content('No abstracts')
     end
+
     context 'with abstracts' do
       before do
         @attendee = FactoryGirl.create(:attendee)
         @attendee.abstracts.create FactoryGirl.attributes_for(:abstract)
       end
       
-      it "should include a link to submit an abstract" do
+      it "displays the title, authors, affiliations, poster number, and session info for each abstract" do
         visit abstracts_url
-        page.should have_content(@attendee.abstract.title)
-      end
-    
-      it "should display a message regarding the current registration deadline in a span.alert-error" do
-  #      response.body.should match /alert-error.*\w+ \d+.*/
+        expect(page).to have_content(@attendee.abstract.title)
+        expect(page).to have_content(@attendee.abstract.authors)
+        expect(page).to have_content(@attendee.abstract.affiliations)
+        expect(page).to have_content(@attendee.abstract.poster_number) unless @attendee.abstract.session.include?('Oral')
+        expect(page).to have_content(@attendee.abstract.session)
       end
     end
   end

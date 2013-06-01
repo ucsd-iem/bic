@@ -8,9 +8,10 @@ set :application, "bic2013" #matches names used in smf_template.erb
 set :repository,  "https://github.com/ucsd-iem/bic.git"
 set :branch, :dev
 set :domain, 'vishnu.ucsd.edu'
-set :deploy_to, "/var/rails/#{application}" # I like this location
+set :deploy_to, "/var/www/#{application}" # I like this location
 set :deploy_via, :remote_cache
 set :user, "ubuntu"
+set :rvm_type, :system
 set :keep_releases, 6
 set :rvm_ruby_string, "1.9.3@#{application}"
 set :server_name, "vishnu.ucsd.edu"

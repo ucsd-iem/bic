@@ -11,11 +11,13 @@
     	  <%=link_to "#{abstract.title}", "#abstract_body_#{abstract.id}", :class => "accordion-toggle", 'data-toggle' => "collapse", 'data-parent' => "#abstracts" %>,
     	  <b><%= abstract.authors.gsub(/ \^[0-9,†]*\^/,'') %></b>.
     	  <%= abstract.affiliations %>
+        <%= "#{content_tag(:b, 'Poster Number')} #{abstract.poster_number}" unless abstract.session.include?('Oral') %>
+        <b>Session</b> <%= abstract.session %>
     	</p>
         <div class="accordion">
             <%= render :partial => "abstract_body", :locals => {:abstract => abstract} %>
         </div>
-    </article>        
+    </article>
   <% end %>
   
   <%= paginate @abstracts, :window => 2 %>
@@ -34,6 +36,5 @@
         <%= link_to raw(k.name + "<sup>#{k.count}</sup>"), keyword_abstracts_url(:keyword => k.name), :class => "#{css_class}" %>
       <% end %>
     </section>
-  <%- end -%>
-  
+  <%- end -%>  
 </section>
