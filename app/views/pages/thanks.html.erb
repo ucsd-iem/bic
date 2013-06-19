@@ -2,7 +2,7 @@
 <section class='page'>
   <h1>Thanks</h1>
   
-  <p>We have received your registration and have sent a confirmation email to the address you provided.  If you have any questions, please contact: (<%= mail_to 'iem@ucsd.edu' %>).</p>
+  <p>We have received your registration and have sent a confirmation email to the address you provided.  If you have any questions, please contact: (<%= mail_to 'bic@ucop.edu' %>).</p>
   
-  <p>If you are a student, you may now <%= link_to "submit an abstract", new_attendee_session_url %>.</p>
+  <%= content_tag :p, "If you are a student, you may now #{link_to "submit an abstract", new_attendee_session_url }" if Time.now < abstract_deadline %>
 </section>

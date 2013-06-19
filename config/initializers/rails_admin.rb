@@ -55,6 +55,15 @@ RailsAdmin.config do |config|
   
   ###  User  ###
   
+  config.model 'Attendee' do
+    edit do
+      field :first_name
+      field :last_name
+      field :email
+      field :password
+    end
+  end
+  
   config.model 'Abstract' do
     edit do
       field :title
@@ -64,10 +73,11 @@ RailsAdmin.config do |config|
       field :body
       field :year
       field :position
-      field :email
-#      field :event do
-#        nested_form false
-#      end
+      field :attendee do
+        nested_form false
+      end
+      field :session
+      field :poster_number
     end
     
     list do

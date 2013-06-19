@@ -1,7 +1,7 @@
 class FaqController < ApplicationController
   
   def index
-    @faqs = Faq.all
+    @faqs = Faq.order('position ASC')
   end
 
   def search

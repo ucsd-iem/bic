@@ -15,8 +15,14 @@ class EventbriteImporter
     end
     
     def import_tickets
-      attendees
-      attendees.map {|a| create_or_update_tickets a['attendee']}
+      response = attendees
+      if response.kind_of?(Array)
+        response.map {|a| create_or_update_tickets a['attendee']}
+      else
+        return
+      end
+    rescue RuntimeError
+      return
     end
     
     def attendees
