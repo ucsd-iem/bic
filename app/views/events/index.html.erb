@@ -3,6 +3,10 @@
 	
 	<h1>Program</h1>
   	
+  <div class='alert alert-info'>
+    The abstract assignments have been finalized – June 17, 2013.  No further changes will be made: <%= link_to 'Abstract Assignments', asset_path('abstract_assignments.xlsx') %>
+  </div>
+  
   <nav>
     <ul class='nav nav-tabs'>
       <li <%= "class=active" if Date.today < Date.new(2013,06,19) %>><%= link_to 'Wednesday, June 19','#wed', "data-toggle" => 'tab' %></li>

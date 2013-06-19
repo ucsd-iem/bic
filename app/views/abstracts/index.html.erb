@@ -2,8 +2,9 @@
 <section id='abstracts'>
   <%= content_tag :p, link_to("Submit or edit an abstract", new_attendee_session_url, :class => "btn btn-large btn-success"), :class => 'pull-right' if Time.now < abstract_deadline %></p>
   <h1>Abstracts <%= "matching keyword: #{params[:keyword]}" if params[:keyword] %><%= "matching query: #{params[:query]}" if params[:query] %></h1>
+
   <div class='alert alert-info'>
-    Abstract Assignments are finished, view the spreadsheet: <%= link_to 'Abstract Assignments', asset_path('abstract_assignments.xlsx') %>
+    The abstract assignments have been finalized – June 17, 2013.  No further changes will be made: <%= link_to 'Abstract Assignments', asset_path('abstract_assignments.xlsx') %>
   </div>
   
   <%= content_tag(:h3, "No abstracts", :class => :alert) if @abstracts && @abstracts.empty?  %>
@@ -13,7 +14,7 @@
     	<p>
     	  <%=link_to "#{abstract.title}", "#abstract_body_#{abstract.id}", :class => "accordion-toggle", 'data-toggle' => "collapse", 'data-parent' => "#abstracts" %>,
     	  <b><%= abstract.authors.gsub(/ \^[0-9,†]*\^/,'') %></b>.
-    	  <%= abstract.affiliations %>
+    	  <%= abstract.affiliations %><br />
         <%= raw "#{content_tag(:b, 'Poster Number:')} #{abstract.poster_number}, " if abstract.session && !abstract.session.include?('Oral') %>
         <%= raw "<b>Session:</b> #{abstract.session}" if abstract.session %>
     	</p>
