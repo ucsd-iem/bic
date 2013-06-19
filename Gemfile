@@ -20,6 +20,7 @@ gem 'paperclip'
 gem 'paper_trail'
 gem 'rails_admin'
 gem 'rails_admin_tag_list'
+gem 'roo'
 gem 'rvm-capistrano'
 gem 'whenever', :require => false
 
