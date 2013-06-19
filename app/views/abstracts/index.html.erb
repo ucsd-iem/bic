@@ -7,6 +7,10 @@
     The abstract assignments have been finalized – June 17, 2013.  No further changes will be made: <%= link_to 'Abstract Assignments', asset_path('abstract_assignments.xlsx') %>
   </div>
   
+  <div class='alert alert-info'>
+	  The changes to the abstract assignments can be seen here. <%= link_to 'Program Errata', asset_path('program_errata.docx') %>
+	  </div>
+  
   <%= content_tag(:h3, "No abstracts", :class => :alert) if @abstracts && @abstracts.empty?  %>
   
   <% @abstracts.each do |abstract| %>
