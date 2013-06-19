@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130427033836) do
+ActiveRecord::Schema.define(:version => 20130602221825) do
 
   create_table "abstracts", :force => true do |t|
     t.string   "title"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(:version => 20130427033836) do
     t.string   "presenter_last_name"
     t.string   "presenter_affiliation"
     t.integer  "event_id"
+    t.string   "session"
+    t.string   "poster_number"
   end
 
   create_table "announcements", :force => true do |t|
@@ -141,7 +143,7 @@ ActiveRecord::Schema.define(:version => 20130427033836) do
     t.integer  "item"
     t.string   "table"
     t.integer  "month",      :limit => 2
-    t.integer  "year",       :limit => 8
+    t.integer  "year",       :limit => 5
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
   end

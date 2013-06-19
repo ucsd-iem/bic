@@ -38,5 +38,5 @@
   
   <p>You must first <%= link_to "register", register_url, :class => 'alert-info' %> for the event before you can submit your abstract.  Once registered, enter the email associated with Eventbrite and your order # (ex. 5146078058-165538432) in the form below.</p>
   
-  <%= render "submit_form" %>
+  <%= render "submit_form" if Time.now < abstract_deadline %>
 </section>

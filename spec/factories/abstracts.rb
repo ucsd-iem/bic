@@ -8,5 +8,7 @@ FactoryGirl.define do
     body { Faker::Lorem.sentences(rand(5)+4).join ' ' }
     keyword_list { Faker::Lorem.words(4).join(', ') }
     personal_statement { Faker::Lorem.sentences(rand(5)+4).join ' ' }
+    poster_number { %w{ 1 2 3 4 LCD }[rand(4)] }
+    session { ['Oral Session A', 'Oral Session B', 'Poster Session III', 'Poster Session IV' ][rand(3)] }
   end
 end

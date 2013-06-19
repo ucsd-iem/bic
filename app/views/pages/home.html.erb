@@ -4,13 +4,13 @@
   <p>The  14th UC Systemwide Bioengineering Symposium in 2013 will take place on the campus of UC San Diego.  You are cordially invited to participate, establish collaborations, renew old and make new friendships. There will be exciting speakers as well as many opportunities for students to present posters, give flat screen posters and oral presentations.  Organized by the <%= link_to 'Jacobs School of Engineering', 'http://www.jacobsschool.ucsd.edu/' %> (<%= link_to 'JSOE', 'http://www.jacobsschool.ucsd.edu/' %>), <%= link_to 'Institute of Engineering in Medicine', "https://iem.ucsd.edu" %> (<%= link_to 'IEM', 'https://iem.ucsd.edu' %>), and <%= link_to "Department of Bioengineering", "http://be.ucsd.edu" %>.</p>
   
 
-  <p>Registration and abstract submission is now <span class='alert-success'>open</span>.  Registration prices increase by $25 on <span class='alert-error'>May 19</span>.</p>
+  <p>Registration is now <span class='alert-success'>open</span>.  Registration prices increase by $25 on <span class='alert-error'>May 19</span>.</p>
 
-  <p>The deadline to submit abstracts for posters is <span class='alert-error'><strike>April 29 at 5 PM</strike></span> <span class='alert-error'>May 3 at 5 PM</span>.</p>
+  <p>Abstract submission is <span class='alert-error'>CLOSED</span>.</p>
 
   <div id="buttons">
     <%= link_to 'Register Now', register_url, :class => 'btn btn-large btn-success', :id => :register %>
-    <%= link_to Time.now < abstract_deadline ? 'Submit Your Abstract' : 'Edit Your Abstract', new_attendee_session_url, :class => 'btn btn-large btn-success' %>
+    <%= link_to Time.now < abstract_deadline ? 'Submit Your Abstract' : 'Edit Your Abstract', new_attendee_session_url, :class => 'btn btn-large btn-success' if Time.now < abstract_deadline %>
   </div>
   
   <hr />
